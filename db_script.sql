@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS `grupo1`;
-CREATE DATABASE `grupo1`;
+DROP DATABASE IF EXISTS `vocealuga`;
+CREATE DATABASE `vocealuga`;
 
 CREATE TABLE `clientes` (
 	`cpf` VARCHAR(11) NOT NULL,
