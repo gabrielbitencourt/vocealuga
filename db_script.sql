@@ -102,3 +102,7 @@ ALTER TABLE `cartoes` ADD CONSTRAINT `cartoes_fk0` FOREIGN KEY (`cliente_id`) RE
 ALTER TABLE `pagamentos` ADD CONSTRAINT `pagamentos_fk0` FOREIGN KEY (`reserva_id`) REFERENCES `reservas`(`id`);
 
 ALTER TABLE `pagamentos` ADD CONSTRAINT `pagamentos_fk1` FOREIGN KEY (`cartao_id`) REFERENCES `cartoes`(`id`);
+
+INSERT INTO `filiais` (`nome`) VALUES ('Rio de Janeiro');
+
+INSERT INTO `funcionarios` (`nome`, `sobrenome`, `usuario`, `senha`, `filial_id`) VALUES ('Funcionário', 'da Silva', 'funcionario.teste', '$2a$10$ACqwDzSgoVzbsbGGO605PO7MqFav.BaCUQW8ToEWm1BD0nC3fSbN2', 1);
