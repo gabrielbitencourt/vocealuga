@@ -1,51 +1,24 @@
 package pages;
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.UIManager;
+import javax.swing.JPanel;
 
-public class Home {
+import routes.Router;
 
-	private JFrame frame;
+import javax.swing.JLabel;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Home window = new Home();
-					window.frame.setVisible(true);
-					UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
-	public Home() {
-		initialize();
-		loadData();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setTitle("Voc\u00EA Aluga - Painel");
-		frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-		frame.setVisible(true);
-		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+public class Home extends JPanel {
 	
-	private void loadData() {
+	Router router;
+
+	/**
+	 * Create the panel.
+	 */
+	public Home(Router router) {
+		this.router = router;
 		
+		JLabel lblHome = new JLabel("Home");
+		add(lblHome);
+
 	}
+
 }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import database.ConexaoBanco;
 import utils.BCrypt;
@@ -13,8 +14,14 @@ public class Funcionario {
 	public String nome;
 	public String sobrenome;
 	public String usuario;
+		
+	public Funcionario(String nome, String sobrenome, String usuario) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.usuario = usuario;
+	}
 	
-	public Funcionario(String login, char[] passwordcs) throws RuntimeException {
+	public static Funcionario authenticate(String login, char[] passwordcs) throws SQLException, RuntimeException {
 		ConexaoBanco bd = new ConexaoBanco();
 		Connection conn = bd.getConnection();
 		try {
@@ -25,10 +32,9 @@ public class Funcionario {
 			rs.first();
 			
 			if (BCrypt.checkpw(new String(passwordcs), rs.getString("senha"))) {
-				this.nome = rs.getString("nome");
-				this.sobrenome = rs.getString("sobrenome");
-				this.usuario = rs.getString("usuario");
-				this.nome = rs.getString("senha");
+				statement.close();
+				conn.close();
+				return new Funcionario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("usuario"));
 			}
 			else {
 				rs.close();
@@ -37,14 +43,46 @@ public class Funcionario {
 				throw new RuntimeException("Senha inválida");
 			}
 			
-			rs.close();
-			statement.close();
-			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new SQLException(e);
+		}
+	}
+
+	public static ArrayList<Funcionario> all() throws SQLException {
+		ArrayList<Funcionario> results = new ArrayList<Funcionario>();
+		Connection conn = new ConexaoBanco().getConnection();
+		try {
+			PreparedStatement statement = conn.prepareStatement("SELECT * from funcionarios");
+			ResultSet rs = statement.executeQuery();
+			
+			while(rs.next()) {
+				results.add(new Funcionario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("usuario")));
+			}
+			return results;
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new RuntimeException(e);
+			throw new SQLException(e);
 		}
 	}
+	
+	public static Funcionario findById(int id) throws SQLException {
+		Connection conn = new ConexaoBanco().getConnection();
+		PreparedStatement statement;
+		try {
+			statement = conn.prepareStatement("SELECT * from funcionarios WHERE id=?");
+			statement.setInt(1, id);
+			ResultSet rs = statement.executeQuery();
+			
+			rs.next();
+			return new Funcionario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("usuario"));
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new SQLException(e);
+		}
+	}
+
 
 }

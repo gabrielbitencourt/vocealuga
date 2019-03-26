@@ -80,11 +80,11 @@ public class Login {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				try {
-					new Funcionario(usuarioField.getText(), senhaField.getPassword());
-					new Home();
+					Funcionario.authenticate(usuarioField.getText(), senhaField.getPassword());
+					new Janela();
 					frame.setVisible(false);
-
-				} catch (RuntimeException e) {
+					
+				} catch (Exception e) {
 					e.printStackTrace();
 					JOptionPane.showMessageDialog(frame.getContentPane(), "Usuário e/ou senha inválidos", "Acesso negado", JOptionPane.ERROR_MESSAGE);
 				}
