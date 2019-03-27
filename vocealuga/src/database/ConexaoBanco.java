@@ -14,19 +14,20 @@ import java.sql.SQLException;
 public class ConexaoBanco {
 	
 	
-	public Connection getConnection() {
+	public Connection getConnection() throws SQLException {
 		try {
 			return DriverManager.getConnection("jdbc:mysql://localhost:3306/vocealuga?useTimezone=true&serverTimezone=UTC", "root", "");
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new RuntimeException(e);
+			throw new SQLException(e);
 		}
 	}
 	
-	public void executeInsertStatement(String sql, Object[] parametros) {
-		Connection conn = getConnection();
+	@Deprecated()
+	public void executeInsertStatement(String sql, Object[] parametros) throws SQLException {
 		try {
+			Connection conn = getConnection();
 			PreparedStatement statement = conn.prepareStatement(sql);
 			for (int i = 0; i < parametros.length; i++) {
 				Object param = parametros[i];
@@ -48,7 +49,7 @@ public class ConexaoBanco {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new RuntimeException(e);
+			throw new SQLException(e);
 		}
 	}
 

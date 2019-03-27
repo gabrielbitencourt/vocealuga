@@ -1,7 +1,7 @@
 # Você Aluga - Grupo 1
 Projeto de Fundamentos de Engenharia de Software - 2019.1
 
-### Como configurar o Banco de Dados
+### Como configurar o BD
 
 1. Instale o MySQL e o phpMyAdmin (no windows, baixe o xampp)
 2. Ligue os servidores Apache e MySQL
@@ -16,20 +16,23 @@ Obs: os valores padrões para rodar localmente em um banco com usuário root e s
 
 Obs2: o usuário e senha padrão para login são 'funcionario.teste' e 'senha123', ambos sem aspas.
 
+### Como fazer uma consulta ao BD
+
+[Tutorial Caelum](https://www.caelum.com.br/apostila-java-web/bancos-de-dados-e-jdbc/)
+
 ### Como instalar o WindowBuilder
 
 1. Vá no menu "Help" do Eclipse
 2. Escolha "Eclipse Marketplace..."
 3. Na caixa de pesquisa digite 'windowbuilder' e instale a versão 1.9.1 (ou mais recente)
 
-### Como criar views e adicioná-las a navegação
+### Como criar abas de navegação
 
 1. Clique no botão novo na barra do Eclipse e escolha "Others..."
 2. Escolha JPanel dentro de Window Builder > Swing Designer
 3. Edite a tela no editor de Design (botão "Design" logo abaixo do editor de código, caso o botão não aparece clique com o botão direito no arquivo .java e escolha Open With > WindowBuilder Editor)
-4. No construtor da tela coloque um paramêtro `Router router`, ele será usado para navegar entre telas e passar dados
-5. Vá no arquivo Janela e edite a funcão `router()` adicionando a "rota" para sua nova tela da seguinte forma:
-`frame.getContentPane().add(new Tela(router), "tela");`
-
-Substituindo pela classe e seu nome (como se fosse uma URL)
-6. Para navegar da sua nova tela a outra, use o `router.navigateTo("nomedatela")`
+4. Na classe Home, ao final da função initialize(), instancie sua nova tela e adicione ao tabbedPane, ex.:
+`
+    JPanel tela = new Tela();
+    tabbedPane.add("Título", null, tela, null);
+`

@@ -1,5 +1,4 @@
-/database/
-/models/
 /pages/
-/routes/
-/utils/
+/clientes/
+/models/
+/database/

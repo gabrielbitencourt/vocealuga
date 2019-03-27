@@ -5,7 +5,7 @@ CREATE TABLE `clientes` (
 	`cpf` VARCHAR(11) NOT NULL,
 	`nome` TEXT NOT NULL,
 	`sobrenome` TEXT NOT NULL,
-	`telefone` TEXT NOT NULL,
+	`celular` TEXT NOT NULL,
 	`endereco` TEXT NOT NULL,
 	`cnh` VARCHAR(11) NOT NULL,
 	`nascimento` DATE NOT NULL,

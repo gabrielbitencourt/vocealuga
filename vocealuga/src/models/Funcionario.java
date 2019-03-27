@@ -32,8 +32,6 @@ public class Funcionario {
 			rs.first();
 			
 			if (BCrypt.checkpw(new String(passwordcs), rs.getString("senha"))) {
-				statement.close();
-				conn.close();
 				return new Funcionario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("usuario"));
 			}
 			else {

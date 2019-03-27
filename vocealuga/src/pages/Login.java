@@ -81,7 +81,7 @@ public class Login {
 			public void actionPerformed(ActionEvent ev) {
 				try {
 					Funcionario.authenticate(usuarioField.getText(), senhaField.getPassword());
-					new Janela();
+					new Home();
 					frame.setVisible(false);
 					
 				} catch (Exception e) {
