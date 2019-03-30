@@ -1,4 +1,4 @@
-package controllers;
+package componentes.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +18,12 @@ public class Login {
 
         try {
             if (Funcionario.authenticate(nameField.getText(), passwordField.getText()) != null) {
-                Navigate.to(event, this.getClass(), "cliente/painel.fxml");
+                Navigate.to(event, this.getClass(), "cliente/painel/cliente.painel.fxml", "VocêAluga - Painel");
+            }
+            else {
+                /*
+                 * TODO - mostrar mensagem de erro
+                 */
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Navigate {
 
     public static void to(ActionEvent event, Class classe, String to, String title) throws IOException {
-        Parent view = FXMLLoader.load(classe.getResource("/views/" + to));
+        Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
         Scene scene = new Scene(view);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setTitle(title);
@@ -21,7 +21,7 @@ public class Navigate {
     }
 
     public static void to(ActionEvent event, Class classe, String to) throws IOException {
-        Parent view = FXMLLoader.load(classe.getResource("/views/" + to));
+        Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
         Scene scene = new Scene(view);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
