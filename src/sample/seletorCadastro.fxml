@@ -2,10 +2,21 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <Button layoutX="85.0" layoutY="111.0" mnemonicParsing="false" onAction="#acessoCenaCadastroUsuario" prefHeight="179.0" prefWidth="198.0" text="Cadastrar Usuario" />
-      <Button layoutX="318.0" layoutY="111.0" mnemonicParsing="false" onAction="#acessoCenaCadastroVeiculo" prefHeight="179.0" prefWidth="198.0" text="Cadastrar Veiculo" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: black;">
+            <children>
+                <Button layoutY="1.0" mnemonicParsing="false" onAction="#acessoHome" prefHeight="26.0" style="-fx-background-color: black" text="Home" textFill="WHITE" />
+                <Button layoutX="291.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoChecagemCliente" prefHeight="26.0" style="-fx-background-color: black;" text="Cliente" textFill="WHITE" />
+                <Button layoutX="444.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: black;" text="Lista Negra" textFill="WHITE" />
+                <Button layoutX="556.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoSample" prefHeight="26.0" style="-fx-background-color: Black;" text="Sair" textFill="WHITE" />
+                <Button layoutX="370.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoCenaCadastroVeiculo" prefHeight="26.0" style="-fx-background-color: black;" text="Veiculo" textFill="WHITE" />
+            </children>
+        </Pane>
+        <Button layoutX="85.0" layoutY="111.0" mnemonicParsing="false" onAction="#acessoCenaCadastroUsuario" prefHeight="179.0" prefWidth="198.0" text="Cadastrar Usuario" />
+        <Button layoutX="318.0" layoutY="111.0" mnemonicParsing="false" onAction="#acessoCenaCadastroVeiculo" prefHeight="179.0" prefWidth="198.0" text="Cadastrar Veiculo" />
+    </children>
 </AnchorPane>
+
