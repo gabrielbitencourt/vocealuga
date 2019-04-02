@@ -10,8 +10,32 @@ import java.io.IOException;
 
 public class Controller {
 
+    public void acessoSample(ActionEvent event) throws IOException {
+        Parent loggedInParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene loggedInScene = new Scene(loggedInParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(loggedInScene);
+        window.show();
+    }
+
+    public void acessoHome(ActionEvent event) throws IOException {
+        Parent loggedInParent = FXMLLoader.load(getClass().getResource("home.fxml"));
+        Scene loggedInScene = new Scene(loggedInParent);
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loggedInScene);
+        window.show();
+    }
+
     public void acessoCenaCadastroUsuario(ActionEvent event) throws IOException {
         Parent loggedInParent = FXMLLoader.load(getClass().getResource("clienteCadastro.fxml"));
+        Scene loggedInScene = new Scene(loggedInParent);
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loggedInScene);
+        window.show();
+    }
+
+    public void acessoChecagemCliente(ActionEvent event) throws IOException {
+        Parent loggedInParent = FXMLLoader.load(getClass().getResource("checagemCliente.fxml"));
         Scene loggedInScene = new Scene(loggedInParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(loggedInScene);
@@ -26,9 +50,8 @@ public class Controller {
         window.show();
     }
 
-
-    public void login(ActionEvent event) throws IOException {
-        Parent loggedInParent = FXMLLoader.load(getClass().getResource("seletorCadastro.fxml"));
+    public void acesso(ActionEvent event) throws IOException {
+        Parent loggedInParent = FXMLLoader.load(getClass().getResource("home.fxml"));
         Scene loggedInScene = new Scene(loggedInParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(loggedInScene);
@@ -48,12 +71,10 @@ public class Controller {
                 break;
         }
     }
-
     public void trocadorCena(String file) throws IOException {
         Parent loggedInParent = FXMLLoader.load(getClass().getResource(file);
         Scene loggedInScene = new Scene(loggedInParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-
         window.setScene(loggedInScene);
         window.show();
     } */
