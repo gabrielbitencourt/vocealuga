@@ -17,7 +17,6 @@ import java.util.ResourceBundle;
 public class ClientePainel implements Initializable {
 
     ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-    @FXML Accordion clientesLista;
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
