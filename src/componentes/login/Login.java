@@ -2,8 +2,7 @@ package componentes.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import models.Funcionario;
 import utils.Navigate;
 
@@ -24,9 +23,13 @@ public class Login {
                 /*
                  * TODO - mostrar mensagem de erro
                  */
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Usuário ou senha inválidos", ButtonType.CLOSE);
+                alert.showAndWait();
             }
         } catch (Exception e) {
             e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Usuário ou senha inválidos", ButtonType.CLOSE);
+            alert.showAndWait();
         }
 
 

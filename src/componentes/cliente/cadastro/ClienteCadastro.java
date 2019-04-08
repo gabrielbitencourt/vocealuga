@@ -2,7 +2,14 @@ package componentes.cliente.cadastro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import models.Cliente;
 import utils.Navigate;
 
@@ -41,6 +48,32 @@ public class ClienteCadastro {
                 emailField.getText(), celularField.getText(), nascimento);
         try {
             cliente.save();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Cliente cadastrado com sucesso. Deseja cadastrar outro?", ButtonType.NO, ButtonType.YES);
+            alert.showAndWait()
+                    .ifPresent(response -> {
+                        if (response == ButtonType.YES) {
+                            nomeField.setText("");
+                            sobrenomeField.setText("");
+                            enderecoField.setText("");
+                            celularField.setText("");
+                            cpfField.setText("");
+                            cnhField.setText("");
+                            emailField.setText("");
+                            nascimentoField.setText("");
+                        }
+                        else if (response == ButtonType.NO) {
+                            try {
+                                Parent view = FXMLLoader.load(getClass().getResource("/componentes/cliente/painel/cliente.painel.fxml"));
+                                Scene scene = new Scene(view);
+                                Stage window = (Stage) nomeField.getScene().getWindow();
+                                window.setScene(scene);
+                                window.show();
+
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
             // TODO mensagem de sucesso (e perguntar se deseja cadastrar novo)
         } catch (SQLException e) {
             e.printStackTrace();

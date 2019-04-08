@@ -9,10 +9,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.cadastro.VeiculoCadastro">
     <children>
-        <Label alignment="CENTER" layoutX="182.0" layoutY="62.0" prefHeight="29.0" prefWidth="247.0" text="Cadastro de Veículo">
+      <Label alignment="CENTER" layoutX="182.0" layoutY="62.0" prefHeight="29.0" prefWidth="247.0" text="Cadastro de Veículo">
          <font>
             <Font name="Noto Sans Regular" size="20.0" />
-         </font></Label>
+         </font>
+      </Label>
       <TextField layoutX="129.0" layoutY="145.0" prefHeight="26.0" prefWidth="119.0" promptText="Placa" />
       <TextField layoutX="264.0" layoutY="145.0" prefHeight="26.0" prefWidth="207.0" promptText="Data de Compra" />
       <TextField layoutX="129.0" layoutY="187.0" prefHeight="26.0" prefWidth="146.0" promptText="Kilometragem" />

@@ -6,20 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.cadastro.ClienteCadastro">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.cadastro.ClienteCadastro">
    <children>
       <Label alignment="CENTER" layoutX="182.0" layoutY="62.0" prefHeight="29.0" prefWidth="247.0" text="Cadastro de Cliente">
          <font>
             <Font name="Noto Sans Regular" size="20.0" />
          </font></Label>
-      <TextField fx:id="nomeField" layoutX="128.0" layoutY="127.0" prefHeight="26.0" prefWidth="124.0" promptText="Nome" />
-      <TextField fx:id="sobrenomeField" layoutX="264.0" layoutY="127.0" prefHeight="26.0" prefWidth="206.0" promptText="Sobrenome" />
-      <TextField fx:id="celularField" layoutX="128.0" layoutY="169.0" prefHeight="26.0" prefWidth="100.0" promptText="Celular" />
-      <TextField fx:id="enderecoField" layoutX="242.0" layoutY="169.0" prefHeight="26.0" prefWidth="228.0" promptText="Endereço" />
+      <TextField fx:id="nomeField" layoutX="128.0" layoutY="127.0" prefHeight="26.0" prefWidth="147.0" promptText="Nome" />
+      <TextField fx:id="sobrenomeField" layoutX="292.0" layoutY="127.0" prefHeight="26.0" prefWidth="178.0" promptText="Sobrenome" />
+      <TextField fx:id="enderecoField" layoutX="128.0" layoutY="169.0" prefHeight="26.0" prefWidth="342.0" promptText="Endereço" />
+      <TextField fx:id="nascimentoField" layoutX="128.0" layoutY="209.0" prefHeight="26.0" prefWidth="100.0" promptText="Data de Nascimento" />
+      <TextField fx:id="cpfField" layoutX="244.0" layoutY="209.0" prefHeight="26.0" prefWidth="106.0" promptText="CPF" />
       <TextField fx:id="cnhField" layoutX="365.0" layoutY="209.0" prefHeight="26.0" prefWidth="106.0" promptText="CNH" />
-      <TextField fx:id="nascimentoField" layoutX="128.0" layoutY="209.0" prefHeight="26.0" prefWidth="221.0" promptText="Data de Nascimento" />
-      <TextField fx:id="cpfField" layoutX="338.0" layoutY="247.0" prefHeight="26.0" prefWidth="134.0" promptText="CPF" />
-      <TextField fx:id="emailField" layoutX="128.0" layoutY="247.0" prefHeight="26.0" prefWidth="196.0" promptText="E-mail" />
+      <TextField fx:id="emailField" layoutX="128.0" layoutY="247.0" prefHeight="26.0" prefWidth="221.0" promptText="E-mail" />
+      <TextField fx:id="celularField" layoutX="364.0" layoutY="247.0" prefHeight="26.0" prefWidth="106.0" promptText="Celular" />
       <Button layoutX="250.0" layoutY="309.0" mnemonicParsing="false" onAction="#cadastrarCliente" prefHeight="41.0" prefWidth="100.0" text="Cadastrar" />
    </children>
 </AnchorPane>

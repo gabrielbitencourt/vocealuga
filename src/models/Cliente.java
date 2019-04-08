@@ -49,45 +49,51 @@ public class Cliente {
         this.nascimento = nascimento;
     }
 
-    public boolean save() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+    public boolean saveOrUpdate() throws SQLException {
         // BUG - SALVA VALORES NULOS COMO VAZIOS
         // ARRUMAR - GARANTIR QUE TODAS AS PROPRIEDADES DA INSTANCIA TEM UM VALOR
         if (Cliente.findById(this.cpf) != null) {
-            PreparedStatement statement = conn.prepareStatement("UPDATE clientes SET nome = ?, sobrenome = ?, endereco = ?, cpf = ?, cnh = ?, email = ?, celular = ?, nascimento = ? WHERE cpf=?");
-            statement.setString(1, this.nome);
-            statement.setString(2, this.sobrenome);
-            statement.setString(3, this.endereco);
-            statement.setString(4, this.cpf);
-            statement.setString(5, this.cnh);
-            statement.setString(6, this.email);
-            statement.setString(7, this.celular);
-
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(this.nascimento);
-            statement.setDate(8, new java.sql.Date(cal.getTimeInMillis()));
-            statement.setString(9, this.cpf);
-            statement.execute();
+            return this.update();
         }
         else {
-            PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, cnh, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-            statement.setString(1, this.nome);
-            statement.setString(2, this.sobrenome);
-            statement.setString(3, this.endereco);
-            statement.setString(4, this.cpf);
-            statement.setString(5, this.cnh);
-            statement.setString(6, this.email);
-            statement.setString(7, this.celular);
-
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(this.nascimento);
-            statement.setDate(8, new java.sql.Date(cal.getTimeInMillis()));
-            statement.execute();
+            return this.save();
         }
-        // BUG - MESMO QUANDO A QUERY NAO EXECUTA ELE RETORNA TRUE
-        // ARRUMAR - VERIFICAR RETORNO DA FUNCAO statement.execute() E TRATAR OS CASOS LANCANDO SQLException EM CASO DE ERRO
+    }
+
+    public boolean save() throws SQLException {
+        Connection conn = new ConexaoBanco().getConnection();
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, cnh, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        statement.setString(1, this.nome);
+        statement.setString(2, this.sobrenome);
+        statement.setString(3, this.endereco);
+        statement.setString(4, this.cpf);
+        statement.setString(5, this.cnh);
+        statement.setString(6, this.email);
+        statement.setString(7, this.celular);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(this.nascimento);
+        statement.setDate(8, new java.sql.Date(cal.getTimeInMillis()));
+        boolean executed = statement.execute();
+        statement.close();
         conn.close();
-        return true;
+        return executed;
+    }
+
+    public boolean update() throws SQLException {
+        Connection conn = new ConexaoBanco().getConnection();
+        PreparedStatement statement = conn.prepareStatement("UPDATE clientes SET nome = ?, sobrenome = ?, endereco = ?, email = ?, celular = ? WHERE cpf=?");
+        statement.setString(1, this.nome);
+        statement.setString(2, this.sobrenome);
+        statement.setString(3, this.endereco);
+        statement.setString(4, this.email);
+        statement.setString(5, this.celular);
+
+        statement.setString(6, this.cpf);
+        boolean executed = statement.execute();
+        statement.close();
+        conn.close();
+        return executed;
     }
 
     public static ArrayList<Cliente> all() throws SQLException {

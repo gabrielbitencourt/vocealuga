@@ -37,7 +37,7 @@ public class Funcionario {
                 rs.close();
                 statement.close();
                 conn.close();
-                throw new RuntimeException("Senha inv�lida");
+                throw new RuntimeException("Senha inválida");
             }
 
         } catch (SQLException e) {

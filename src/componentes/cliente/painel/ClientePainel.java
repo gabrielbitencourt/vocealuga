@@ -1,5 +1,6 @@
 package componentes.cliente.painel;
 
+import javafx.scene.control.TitledPane;
 import models.Cliente;
 import utils.Navigate;
 
@@ -26,6 +27,9 @@ public class ClientePainel implements Initializable {
             for (Cliente c : clientes) {
                 // TODO (front) COLOCAR CLIENTES EM UMA LISTA OU ACCORDION
                 System.out.println(c.nome);
+                TitledPane tp = new TitledPane();
+                tp.setText(c.nome + " " + c.sobrenome + " (" + c.cpf + ")");
+                clientesLista.getPanes().add(tp);
             }
 
         } catch (SQLException e) {
