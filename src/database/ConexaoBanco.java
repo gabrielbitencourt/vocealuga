@@ -16,7 +16,7 @@ public class ConexaoBanco {
 
     public Connection getConnection() throws SQLException {
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/vocealuga?useTimezone=true&serverTimezone=UTC", "root", "convidado");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/vocealuga?useTimezone=true&serverTimezone=UTC", "root", "");
 
         } catch (SQLException e) {
             e.printStackTrace();

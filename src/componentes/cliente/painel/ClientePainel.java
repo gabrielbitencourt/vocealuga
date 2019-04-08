@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 
 public class ClientePainel implements Initializable {
 
+//    @FXML Accordion clientesLista;
     ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 
     @FXML
@@ -26,9 +27,9 @@ public class ClientePainel implements Initializable {
             for (Cliente c : clientes) {
                 // TODO (front) COLOCAR CLIENTES EM UMA LISTA OU ACCORDION
                 System.out.println(c.nome);
-                TitledPane tp = new TitledPane();
-                tp.setText(c.nome + " " + c.sobrenome + " (" + c.cpf + ")");
-                clientesLista.getPanes().add(tp);
+//                TitledPane tp = new TitledPane();
+//                tp.setText(c.nome + " " + c.sobrenome + " (" + c.cpf + ")");
+//                clientesLista.getPanes().add(tp);
             }
 
         } catch (SQLException e) {

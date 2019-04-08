@@ -10,7 +10,7 @@
             prefHeight="400.0" prefWidth="600.0">
 
     <children>
-        <fx:include source="/componentes/navbar/navbar.fxml"
+        <fx:include source="/componentes/navbar/navbar.fxml"></fx:include>
         <TextField layoutX="215.0" layoutY="116.0" promptText="CPF" />
         <Button layoutX="272.0" layoutY="157.0" mnemonicParsing="false" onAction="#acessoClintePainel" text="Entrar" />
         <Label layoutX="170.0" layoutY="80.0" text="CPF do cliente ja cadastrado:">
