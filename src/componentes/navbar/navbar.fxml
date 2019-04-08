@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="90.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.navbar.Navbar">
-   <children>
-      <Button layoutX="387.0" layoutY="33.0" onAction="#toClientes" mnemonicParsing="false" text="Clientes" />
-      <Button layoutX="455.0" layoutY="33.0" onAction="#toReservas" mnemonicParsing="false" text="Reservas" />
-      <Button layoutX="526.0" layoutY="33.0" onAction="#toVeiculos" mnemonicParsing="false" text="Veículos" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.navbar.Navbar">
+    <children>
+        <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: black;">
+            <children>
+                <Button layoutY="1.0" mnemonicParsing="false" onAction="#acessoHome" prefHeight="26.0" style="-fx-background-color: black" text="Home" textFill="WHITE" />
+                <Button layoutX="291.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoCliente" prefHeight="26.0" style="-fx-background-color: black;" text="Cliente" textFill="WHITE" />
+                <Button layoutX="444.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: black;" text="Lista Negra" textFill="WHITE" />
+                <Button layoutX="556.0" layoutY="1.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" style="-fx-background-color: Black;" text="Sair" textFill="WHITE" />
+                <Button layoutX="370.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoVeiculo" prefHeight="26.0" style="-fx-background-color: black;" text="Veiculo" textFill="WHITE" />
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>

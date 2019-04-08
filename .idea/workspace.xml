@@ -11,6 +11,10 @@
       <change beforePath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ConexaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ConexaoBanco.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +77,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/ClientePainel.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="425">
               <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+=======
+            <state relative-caret-position="255">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="38" selection-end-column="5" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,11 +92,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="21" column="129" selection-start-line="21" selection-start-column="129" selection-end-line="21" selection-end-column="129" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/cliente.painel.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
             </state>
           </provider>
         </entry>
@@ -115,6 +131,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/models/Funcionario.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
@@ -141,6 +158,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
               <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="5" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/checagem/checagem.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/checagem/ChecagemCliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/views/Main.java" />
         <option value="$PROJECT_DIR$/src/views/LoginController.java" />
         <option value="$PROJECT_DIR$/src/views/login/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/database/ConexaoBanco.java" />
         <option value="$PROJECT_DIR$/src/views/login/Login.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/Main.java" />
         <option value="$PROJECT_DIR$/src/views/cliente/cliente.cadastro.fxml" />
@@ -199,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/controllers/Cliente.java" />
         <option value="$PROJECT_DIR$/src/componentes/cliente/painel/Cliente.java" />
         <option value="$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/componentes/cliente/pane.fxml" />
         <option value="$PROJECT_DIR$/src/componentes/cliente/painel/pane/pane.fxml" />
         <option value="$PROJECT_DIR$/src/componentes/cliente/painel/pane/Pane.java" />
@@ -212,15 +245,30 @@
         <option value="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" />
         <option value="$PROJECT_DIR$/src/componentes/login/Login.java" />
         <option value="$PROJECT_DIR$/src/models/Funcionario.java" />
+=======
+        <option value="$PROJECT_DIR$/src/models/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/pane.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/painel/pane/pane.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/painel/pane/Pane.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java" />
+        <option value="$PROJECT_DIR$/src/database/ConexaoBanco.java" />
+        <option value="$PROJECT_DIR$/src/componentes/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/painel/ClientePainel.java" />
+        <option value="$PROJECT_DIR$/src/componentes/navbar/navbar.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/navbar/Navbar.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/checagem/ChecagemCliente.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/painel/cliente.painel.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/checagem/checagem.fxml" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="987" />
-    <option name="y" value="30" />
-    <option name="width" value="933" />
-    <option name="height" value="1050" />
+    <option name="y" value="-1" />
+    <option name="width" value="1440" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -270,6 +318,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
               <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="checagem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
               <item name="painel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +341,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
               <item name="navbar" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
@@ -292,14 +349,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
               <item name="veiculo" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
             </path>
             <path>
               <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
               <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
-              <item name="veiculo" type="462c0819:PsiDirectoryNode" />
               <item name="cadastro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
@@ -333,8 +397,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553642402426" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/mysql-connector-java-8.0.15.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -370,18 +434,6 @@
       <option name="scope" value="ALL" />
       <option name="testName" />
       <method />
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -425,6 +477,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -453,10 +517,14 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="-1" width="1440" height="860" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12313433" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12482066" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
       <window_info id="Structure" order="1" weight="0.2496799" />
       <window_info id="Favorites" order="2" weight="0.3297055" />
       <window_info id="Designer" order="3" />
@@ -465,7 +533,11 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32719395" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32608697" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,7 +548,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32880434" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -504,6 +576,7 @@
     <entry file="file://$PROJECT_DIR$/vcalugs.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/database/ConexaoBanco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -520,6 +593,16 @@
           <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
         </state>
       </provider>
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java" />
+    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="89" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="89" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/BCrypt.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -583,6 +666,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -594,12 +678,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
           <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/pane/pane.fxml" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/TitledPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/pane/Pane.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/Initializable.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/ConexaoBanco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Optional.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -643,12 +749,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="15" selection-start-line="14" selection-end-line="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/componentes/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/navbar/navbar.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="8" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/navbar/Navbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/ClientePainel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -656,19 +794,34 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="40" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/componentes/navbar/Navbar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/ClientePainel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="38" selection-end-column="5" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/componentes/navbar/navbar.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -681,6 +834,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/checagem/ChecagemCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -688,6 +847,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componentes/cliente/painel/cliente.painel.fxml">
+<<<<<<< HEAD
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -700,6 +860,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="129" selection-start-line="21" selection-start-column="129" selection-end-line="21" selection-end-column="129" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
         </state>
       </provider>
     </entry>
@@ -711,6 +876,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Alert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -735,8 +901,15 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/checagem/checagem.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+>>>>>>> aa4e0feb0975caa990fa6b234ec1bf9bb6d1e818
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">
