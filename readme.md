@@ -19,20 +19,3 @@ Obs2: o usuário e senha padrão para login são 'funcionario.teste' e 'senha123
 ### Como fazer uma consulta ao BD
 
 [Tutorial Caelum](https://www.caelum.com.br/apostila-java-web/bancos-de-dados-e-jdbc/)
-
-### Como instalar o WindowBuilder
-
-1. Vá no menu "Help" do Eclipse
-2. Escolha "Eclipse Marketplace..."
-3. Na caixa de pesquisa digite 'windowbuilder' e instale a versão 1.9.1 (ou mais recente)
-
-### Como criar abas de navegação
-
-1. Clique no botão novo na barra do Eclipse e escolha "Others..."
-2. Escolha JPanel dentro de Window Builder > Swing Designer
-3. Edite a tela no editor de Design (botão "Design" logo abaixo do editor de código, caso o botão não aparece clique com o botão direito no arquivo .java e escolha Open With > WindowBuilder Editor)
-4. Na classe Home, ao final da função initialize(), instancie sua nova tela e adicione ao tabbedPane, ex.:
-`
-    JPanel tela = new Tela();
-    tabbedPane.add("Título", null, tela, null);
-`
