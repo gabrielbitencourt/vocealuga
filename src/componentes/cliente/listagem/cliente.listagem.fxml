@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.listagem.ClienteListagem">
+
+    <children>
+        <fx:include source="/componentes/navbar/navbar.fxml" />
+        <Accordion fx:id="clientesLista" layoutY="67.0" prefHeight="333.0" prefWidth="606.0" />
+        <Button layoutX="11.0" layoutY="40.0" mnemonicParsing="false" onAction="#acessoCadastroCliente" text="Novo Cliente" />
+    </children>
+
+</AnchorPane>

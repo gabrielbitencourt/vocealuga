@@ -49,6 +49,10 @@ public class Cliente {
         this.nascimento = nascimento;
     }
 
+    public String toString() {
+        return this.nome + " " + this.sobrenome;
+    }
+
     public boolean saveOrUpdate() throws SQLException {
         // BUG - SALVA VALORES NULOS COMO VAZIOS
         // ARRUMAR - GARANTIR QUE TODAS AS PROPRIEDADES DA INSTANCIA TEM UM VALOR

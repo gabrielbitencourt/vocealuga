@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.navbar.Navbar">
+<AnchorPane prefHeight="30.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.navbar.Navbar">
     <children>
         <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: black;">
             <children>
-                <Button layoutY="1.0" mnemonicParsing="false" onAction="#acessoHome" prefHeight="26.0" style="-fx-background-color: black" text="Home" textFill="WHITE" />
-                <Button layoutX="291.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoCliente" prefHeight="26.0" style="-fx-background-color: black;" text="Cliente" textFill="WHITE" />
-                <Button layoutX="444.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: black;" text="Lista Negra" textFill="WHITE" />
-                <Button layoutX="556.0" layoutY="1.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" style="-fx-background-color: Black;" text="Sair" textFill="WHITE" />
-                <Button layoutX="370.0" layoutY="1.0" mnemonicParsing="false" onAction="#acessoVeiculo" prefHeight="26.0" style="-fx-background-color: black;" text="Veiculo" textFill="WHITE" />
+                <Button layoutX="10.0" layoutY="2.0" mnemonicParsing="false" onAction="#toClientes" prefHeight="26.0" style="-fx-background-color: black;" text="Clientes" textFill="WHITE" />
+                <Button layoutX="163.0" layoutY="2.0" mnemonicParsing="false" onAction="#toReservas" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Reservas" textFill="WHITE" />
+                <Button layoutX="85.0" layoutY="2.0" mnemonicParsing="false" onAction="#toVeiculos" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Veículos" textFill="WHITE" />
+                <Button layoutX="556.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" style="-fx-background-color: Black; -fx-cursor: hand;" text="Sair" textFill="WHITE" />
             </children>
         </Pane>
     </children>

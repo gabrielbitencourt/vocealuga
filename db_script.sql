@@ -105,4 +105,4 @@ ALTER TABLE `pagamentos` ADD CONSTRAINT `pagamentos_fk1` FOREIGN KEY (`cartao_id
 
 INSERT INTO `filiais` (`nome`) VALUES ('Rio de Janeiro');
 
-INSERT INTO `funcionarios` (`nome`, `sobrenome`, `usuario`, `senha`, `filial_id`) VALUES ('Funcionário', 'da Silva', 'funcionario.teste', '$2a$10$ACqwDzSgoVzbsbGGO605PO7MqFav.BaCUQW8ToEWm1BD0nC3fSbN2', 1);
+INSERT INTO `funcionarios` (`nome`, `sobrenome`, `usuario`, `senha`, `filial_id`) VALUES ('Funcionário', 'da Silva', 'func', '$2a$10$ACqwDzSgoVzbsbGGO605PO7MqFav.BaCUQW8ToEWm1BD0nC3fSbN2', 1);

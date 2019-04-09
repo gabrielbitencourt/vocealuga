@@ -8,27 +8,15 @@ import java.io.IOException;
 public class Navbar {
 
     public void toClientes(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/painel/cliente.painel.fxml");
+        Navigate.to(event, this.getClass(), "cliente/listagem/cliente.listagem.fxml");
     }
 
     public void toReservas(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "reserva/painel/reservas.painel.fxml");
+        Navigate.to(event, this.getClass(), "reserva/lsitagem/reserva.listagem.fxml");
     }
 
     public void toVeiculos(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "veiculo/painel/veiculo.painel.fxml");
-    }
-
-    public void acessoHome(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "home/home.fxml");
-    }
-
-    public void acessoCliente(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/painel/cliente.painel.fxml");
-    }
-
-    public void acessoVeiculo(ActionEvent event) throws IOException {
-        // Navigate.to(event, this.getClass(), "veiculo/painel/veiculo.painel.fxml");
+        Navigate.to(event, this.getClass(), "veiculo/listagem/veiculo.listagem.fxml");
     }
 
     public void logout(ActionEvent event) throws IOException {
