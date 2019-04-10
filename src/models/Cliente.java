@@ -5,8 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import java.sql.Date;
 
 import database.ConexaoBanco;
 
@@ -74,10 +73,8 @@ public class Cliente {
         statement.setString(5, this.cnh);
         statement.setString(6, this.email);
         statement.setString(7, this.celular);
+        statement.setDate(8, this.nascimento);
 
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(this.nascimento);
-        statement.setDate(8, new java.sql.Date(cal.getTimeInMillis()));
         boolean executed = statement.execute();
         statement.close();
         conn.close();
@@ -94,6 +91,17 @@ public class Cliente {
         statement.setString(5, this.celular);
 
         statement.setString(6, this.cpf);
+        boolean executed = statement.execute();
+        statement.close();
+        conn.close();
+        return executed;
+    }
+
+    public boolean delete() throws SQLException {
+        Connection conn = new ConexaoBanco().getConnection();
+        PreparedStatement statement = conn.prepareStatement("DELETE FROM clientes WHERE cpf=?");
+        statement.setString(1, this.cpf);
+
         boolean executed = statement.execute();
         statement.close();
         conn.close();

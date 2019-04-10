@@ -8,7 +8,7 @@
     <children>
         <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: black;">
             <children>
-                <Button layoutX="10.0" layoutY="2.0" mnemonicParsing="false" onAction="#toClientes" prefHeight="26.0" style="-fx-background-color: black;" text="Clientes" textFill="WHITE" />
+                <Button layoutX="10.0" layoutY="2.0" mnemonicParsing="false" onAction="#toClientes" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Clientes" textFill="WHITE" />
                 <Button layoutX="163.0" layoutY="2.0" mnemonicParsing="false" onAction="#toReservas" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Reservas" textFill="WHITE" />
                 <Button layoutX="85.0" layoutY="2.0" mnemonicParsing="false" onAction="#toVeiculos" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Veículos" textFill="WHITE" />
                 <Button layoutX="556.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" style="-fx-background-color: Black; -fx-cursor: hand;" text="Sair" textFill="WHITE" />

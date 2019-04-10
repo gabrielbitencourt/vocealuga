@@ -5,12 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.TitledPane;
-import javafx.stage.Stage;
 import models.Cliente;
 import utils.Navigate;
 
@@ -38,8 +34,9 @@ public class ClienteListagem implements Initializable {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/componentes/cliente/edicao/cliente.edicao.fxml"));
                     tp.setContent(loader.load());
                     clientesLista.getPanes().add(tp);
+
                     ClienteEdicao controller = loader.getController();
-                    controller.init(c);
+                    controller.init(c, tp);
 
                 } catch (IOException e) {
                     e.printStackTrace();

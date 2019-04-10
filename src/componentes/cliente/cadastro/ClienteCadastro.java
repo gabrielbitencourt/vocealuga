@@ -2,14 +2,9 @@ package componentes.cliente.cadastro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import models.Cliente;
 import utils.FormattedField;
 import utils.Navigate;
@@ -18,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 
 public class ClienteCadastro {
 
@@ -38,7 +33,7 @@ public class ClienteCadastro {
     public void cadastrarCliente(ActionEvent event) {
         Date nascimento = null;
         try {
-            nascimento = new SimpleDateFormat("dd/MM/yyyy").parse(nascimentoField.getText());
+            nascimento = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(nascimentoField.getText()).getTime());
 
         } catch (ParseException e) {
             e.printStackTrace();

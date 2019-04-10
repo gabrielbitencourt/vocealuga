@@ -19,13 +19,13 @@
        <TextField fx:id="enderecoField" layoutX="131.0" layoutY="107.0" prefHeight="26.0" prefWidth="339.0" promptText="ex.: Rua dos Bobos, 0 apto 1 - Bairro - Cidade/ES" />
 
        <Label layoutX="130.0" layoutY="138.0" text="CPF" />
-       <FormattedField fx:id="cpfField" layoutX="131.0" layoutY="159.0" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
+       <FormattedField fx:id="cpfField" disable="true" layoutX="131.0" layoutY="159.0" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
 
        <Label layoutX="247.0" layoutY="138.0" text="CNH" />
-       <FormattedField fx:id="cnhField" layoutX="247.0" layoutY="159.0" mask="###########" prefHeight="26.0" prefWidth="106.0" />
+       <FormattedField fx:id="cnhField" disable="true" layoutX="247.0" layoutY="159.0" mask="###########" prefHeight="26.0" prefWidth="106.0" />
 
        <Label layoutX="362.0" layoutY="138.0" text="Data de Nascimento" />
-       <FormattedField fx:id="nascimentoField" layoutX="364.0" layoutY="160.0" mask="##/##/####" prefHeight="25.0" prefWidth="106.0" />
+       <FormattedField fx:id="nascimentoField" disable="true" layoutX="364.0" layoutY="160.0" mask="##/##/####" prefHeight="25.0" prefWidth="106.0" />
 
        <Label layoutX="132.0" layoutY="191.0" text="E-mail" />
        <TextField fx:id="emailField" layoutX="131.0" layoutY="212.0" prefHeight="26.0" prefWidth="223.0" />
@@ -33,8 +33,8 @@
        <Label layoutX="364.0" layoutY="191.0" text="Celular" />
        <FormattedField fx:id="celularField" layoutX="364.0" layoutY="212.0" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
 
-      <Button layoutX="253.0" layoutY="253.0" mnemonicParsing="false" text="Deletar Cliente" />
-      <Button layoutX="367.0" layoutY="253.0" mnemonicParsing="false" onAction="#toCadastroCliente" text="Atualizar Cliente" />
+      <Button layoutX="253.0" layoutY="253.0" mnemonicParsing="false" onAction="#deletarCliente" text="Deletar Cliente" />
+      <Button layoutX="367.0" layoutY="253.0" mnemonicParsing="false" onAction="#atualizarCliente" text="Atualizar Cliente" />
 
 
    </children>

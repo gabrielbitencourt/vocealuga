@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.reserva.listagem.ReservaListagem">
+
+    <fx:include source="../../navbar/navbar.fxml" />
+    <Button onAction="#prevMes" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" text="&lt;" />
+    <Label fx:id="mesLabel" layoutX="287.0" layoutY="59.0" text="Mês" />
+    <Button onAction="#nextMes" layoutX="559.0" layoutY="54.0" mnemonicParsing="false" text="&gt;" />
+    <TableView fx:id="monthTable" layoutY="97.0" prefHeight="303.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="domingoCol" prefWidth="85.5" text="DOM" />
+            <TableColumn fx:id="segundaCol" prefWidth="85.5" text="SEG" />
+            <TableColumn fx:id="tercaCol" prefWidth="85.5" text="TER" />
+            <TableColumn fx:id="quartaCol" prefWidth="85.5" text="QUA" />
+            <TableColumn fx:id="quintaCol" prefWidth="85.5" text="QUI" />
+            <TableColumn fx:id="sextaCol" prefWidth="85.5" text="SEX" />
+            <TableColumn fx:id="sabadoCol" prefWidth="85.5" text="SAB" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

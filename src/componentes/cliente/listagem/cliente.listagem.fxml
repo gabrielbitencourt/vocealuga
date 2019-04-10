@@ -8,8 +8,8 @@
 
     <children>
         <fx:include source="/componentes/navbar/navbar.fxml" />
-        <Accordion fx:id="clientesLista" layoutY="67.0" prefHeight="333.0" prefWidth="606.0" />
-        <Button layoutX="11.0" layoutY="40.0" mnemonicParsing="false" onAction="#acessoCadastroCliente" text="Novo Cliente" />
+      <Accordion fx:id="clientesLista" layoutY="29.0" prefHeight="321.0" prefWidth="600.0" style="-fx-max-height: 70%;" />
+        <Button layoutX="489.0" layoutY="359.0" mnemonicParsing="false" onAction="#acessoCadastroCliente" text="Novo Cliente" />
     </children>
 
 </AnchorPane>

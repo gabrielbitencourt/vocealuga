@@ -12,7 +12,7 @@ public class Navbar {
     }
 
     public void toReservas(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "reserva/lsitagem/reserva.listagem.fxml");
+        Navigate.to(event, this.getClass(), "reserva/listagem/reserva.listagem.fxml");
     }
 
     public void toVeiculos(ActionEvent event) throws IOException {
