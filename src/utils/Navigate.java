@@ -15,14 +15,14 @@ public class Navigate {
 
     public static void to(Class classe, String to, String title) throws IOException {
         Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
-        Scene scene = new Scene(view, stage.getWidth(), stage.getHeight());
+        Scene scene = new Scene(view, stage.getScene().getWidth(), stage.getScene().getHeight());
         stage.setTitle(title);
         stage.setScene(scene);
     }
 
     public static void to(Class classe, String to) throws IOException {
         Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
-        Scene scene = new Scene(view, stage.getWidth(), stage.getHeight());
+        Scene scene = new Scene(view, stage.getScene().getWidth(), stage.getScene().getHeight());
 
         stage.setScene(scene);
     }

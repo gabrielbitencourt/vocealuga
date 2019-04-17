@@ -3,13 +3,11 @@ package componentes.reserva.listagem;
 import componentes.reserva.listagem.cell.DiaCell;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.util.Callback;
@@ -138,7 +136,7 @@ public class ReservaListagem implements Initializable {
 
 	public void initMes() {
 		monthTable.getItems().clear();
-		mesLabel.setText(Month.of(cal.get(Calendar.MONTH) + 1).name() + "/" + cal.get(Calendar.YEAR));
+		mesLabel.setText(Month.of(cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR));
 
 		cal.set(Calendar.DAY_OF_MONTH, 1);
 		int month = cal.get(Calendar.MONTH);

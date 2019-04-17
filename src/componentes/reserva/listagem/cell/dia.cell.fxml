@@ -16,12 +16,7 @@
    </top>
    <center>
       <AnchorPane>
-         <Button layoutX="20.0" layoutY="3.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" text="x retiradas" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" BorderPane.alignment="CENTER">
-            <font>
-               <Font size="10.0" />
-            </font>
-         </Button>
-         <Button layoutX="20.0" layoutY="27.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" text="x entregas" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" BorderPane.alignment="CENTER">
+         <Button layoutX="20.0" layoutY="3.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" text="x retiradas" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0" BorderPane.alignment="CENTER">
             <font>
                <Font size="10.0" />
             </font>

@@ -10,8 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.login.Login">
-    <top>
+<VBox alignment="CENTER" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.login.Login">
+    <children>
         <Label alignment="CENTER" prefHeight="29.0" prefWidth="247.0" text="VocêAluga" BorderPane.alignment="BOTTOM_CENTER">
             <font>
                 <Font name="Noto Sans Regular" size="20.0" />
@@ -19,24 +19,23 @@
             <BorderPane.margin>
                 <Insets top="30.0" />
             </BorderPane.margin>
+         <VBox.margin>
+            <Insets bottom="20.0" top="5.0" />
+         </VBox.margin>
         </Label>
-    </top>
-    <center>
-        <VBox layoutX="197.0" layoutY="10.0">
+        <AnchorPane>
             <children>
-            <AnchorPane>
-               <children>
-                      <TextField fx:id="nameField" onAction="#login" prefHeight="25.0" prefWidth="206.0" promptText="Login" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                      <PasswordField fx:id="passwordField" layoutY="25.0" onAction="#login" prefHeight="25.0" prefWidth="206.0" promptText="Senha" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-               </children>
-            </AnchorPane>
+                <TextField fx:id="nameField" onAction="#login" prefHeight="25.0" prefWidth="206.0" promptText="Login" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="30.0" onAction="#login" prefHeight="25.0" prefWidth="206.0" promptText="Senha" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
             </children>
-        </VBox>
-    </center>
-    <bottom>
+        </AnchorPane>
         <Button mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="79.0" text="Entrar" BorderPane.alignment="TOP_CENTER">
             <BorderPane.margin>
                 <Insets bottom="30.0" />
-            </BorderPane.margin></Button>
-    </bottom>
-</BorderPane>
+            </BorderPane.margin>
+         <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+         </VBox.margin>
+        </Button>
+    </children>
+</VBox>

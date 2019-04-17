@@ -27,7 +27,7 @@
                            <Insets />
                         </HBox.margin></FormattedField>
                      <BorderPane.margin>
-                        <Insets top="5.0" />
+                        <Insets bottom="5.0" top="5.0" />
                      </BorderPane.margin>
                         </HBox>
                     </left>
@@ -44,7 +44,8 @@
     <center>
         <Accordion fx:id="clientesLista" layoutY="29.0" minHeight="400.0" prefHeight="321.0" prefWidth="600.0" style="-fx-max-height: 70%;" BorderPane.alignment="TOP_CENTER">
          <BorderPane.margin>
-            <Insets top="5.0" />
-         </BorderPane.margin></Accordion>
+            <Insets />
+         </BorderPane.margin>
+        </Accordion>
     </center>
 </BorderPane>

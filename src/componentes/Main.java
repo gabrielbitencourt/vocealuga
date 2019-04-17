@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import utils.Navigate;
 
@@ -17,11 +18,14 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("/componentes/login/login.fxml"));
             primaryStage.setTitle("VocêAluga - Login");
             primaryStage.setScene(new Scene(root));
+
+            primaryStage.setMaximized(true);
             primaryStage.setMinHeight(600);
             primaryStage.setMinWidth(600);
-            primaryStage.setMaximized(true);
+
             primaryStage.show();
             Navigate.setStage(primaryStage);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
