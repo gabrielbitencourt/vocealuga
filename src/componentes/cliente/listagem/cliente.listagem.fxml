@@ -1,15 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import utils.FormattedField?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.listagem.ClienteListagem">
-
-    <children>
-        <fx:include source="/componentes/navbar/navbar.fxml" />
-      <Accordion fx:id="clientesLista" layoutY="29.0" prefHeight="321.0" prefWidth="600.0" style="-fx-max-height: 70%;" />
-        <Button layoutX="489.0" layoutY="359.0" mnemonicParsing="false" onAction="#acessoCadastroCliente" text="Novo Cliente" />
-    </children>
-
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.listagem.ClienteListagem">
+    <top>
+        <BorderPane>
+            <top>
+                <fx:include source="/componentes/navbar/navbar.fxml" />
+            </top>
+            <bottom>
+                <BorderPane>
+                    <left>
+                        <HBox>
+                            <Label prefHeight="25.0" text="Pesquisar por CPF: ">
+                        <HBox.margin>
+                           <Insets left="5.0" />
+                        </HBox.margin></Label>
+                            <FormattedField mask="###.###.###-##">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin></FormattedField>
+                     <BorderPane.margin>
+                        <Insets top="5.0" />
+                     </BorderPane.margin>
+                        </HBox>
+                    </left>
+                    <right>
+                        <Button mnemonicParsing="false" onAction="#acessoCadastroCliente" text="Novo Cliente">
+                     <BorderPane.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </BorderPane.margin></Button>
+                    </right>
+                </BorderPane>
+            </bottom>
+        </BorderPane>
+    </top>
+    <center>
+        <Accordion fx:id="clientesLista" layoutY="29.0" minHeight="400.0" prefHeight="321.0" prefWidth="600.0" style="-fx-max-height: 70%;" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin></Accordion>
+    </center>
+</BorderPane>

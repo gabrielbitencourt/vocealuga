@@ -31,7 +31,7 @@ public class ClienteEdicao {
     @FXML FormattedField celularField;
 
     public void toCadastroCliente(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/cadastro/cliente.cadastro.fxml");
+        Navigate.to(this.getClass(), "cliente/cadastro/cliente.cadastro.fxml");
     }
 
     public void init(Cliente c, TitledPane tp) {
@@ -47,7 +47,7 @@ public class ClienteEdicao {
         emailField.setText(c.email);
 
         String data = "";
-        System.out.println(c.nascimento);
+//        System.out.println(c.nascimento);
         ArrayList<String> dataList = new ArrayList<>(Arrays.asList(c.nascimento.toString().split("-")));
         Collections.reverse(dataList);
         for (String d : dataList) {

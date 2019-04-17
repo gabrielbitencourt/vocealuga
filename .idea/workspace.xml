@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="824ca69e-0ba2-4249-94d7-7da1e0fd2f7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1779a7fa-e712-4d91-88d7-7c11132b9115" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentes/cliente/edicao/cliente.edicao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/edicao/cliente.edicao.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/login/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/navbar/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/navbar/Navbar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/navbar/navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/navbar/navbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentes/veiculo/listagem/VeiculoListagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/veiculo/listagem/VeiculoListagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/ConexaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ConexaoBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/BCrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/BCrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/FormattedField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FormattedField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Navigate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Navigate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -44,52 +53,90 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/utils/Navigate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componentes/navbar/navbar.fxml">
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="-91">
+              <caret line="14" column="71" lean-forward="true" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="171" selection-start-line="10" selection-start-column="171" selection-end-line="10" selection-end-column="171" />
+            <state relative-caret-position="99">
+              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagem.java">
+        <entry file="file://$PROJECT_DIR$/db_script.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+            <state relative-caret-position="474">
+              <caret line="226" column="24" selection-start-line="226" selection-start-column="24" selection-end-line="226" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Day#0;class#ReservaListagem#0" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="class#Week#0;class#ReservaListagem#0" />
-                <element signature="method#Week#0;class#Week#0;class#ReservaListagem#0" />
-                <element signature="e#1287#1288#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
-                <element signature="e#1292#1293#0" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1476#1477#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1539#1540#0" expanded="true" />
-                <element signature="e#1569#1570#0" expanded="true" />
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-                <element signature="e#1665#1666#0" expanded="true" />
-                <element signature="e#1695#1696#0" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#621#630#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="33" column="25" selection-start-line="33" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/login/login.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componentes/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -99,8 +146,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,10 +160,27 @@
       <find>75.0</find>
       <find>GETMON</find>
       <find>85.7</find>
+      <find>System.out.println(cal.get(Calendar.MONTH) + &quot;/&quot; + cal.get(Calendar.DAY_OF_MONTH));</find>
+      <find>System.out.println(cal.get(Calendar.DAY_OF_MONTH) + &quot;/&quot;</find>
+      <find>&quot;/&quot; + cal.get(Calendar.MONTH)</find>
+      <find>week</find>
+      <find>prefHeight=&quot;30.0&quot;</find>
+      <find>scene</find>
+      <find>.toString() :</find>
+      <find>!= null ? days.get(\d) : null</find>
+      <find>get(</find>
+      <find>veiculos</find>
+      <find>UNIQ</find>
     </findStrings>
     <replaceStrings>
       <replace>85.7</replace>
       <replace>85.5</replace>
+      <replace>System.out.println(cal.get(Calendar.DAY_OF_MONTH) + &quot;/&quot; + cal.get(Calendar.MONTH));</replace>
+      <replace>System.out.println(&quot;&quot; + cal.get(Calendar.DAY_OF_MONTH) + &quot;/&quot;</replace>
+      <replace>&quot;/&quot; + (cal.get(Calendar.MONTH) + 1)</replace>
+      <replace>prefHeight=&quot;150.0&quot;</replace>
+      <replace>:</replace>
+      <replace>filiais</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -126,25 +190,56 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f5870dd3-6a6e-4e1a-88e3-4a9fddd4d6f7/console.sql" />
-        <option value="$PROJECT_DIR$/src/componentes/cliente/edicao/cliente.edicao.fxml" />
-        <option value="$PROJECT_DIR$/src/database/ConexaoBanco.java" />
-        <option value="$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml" />
-        <option value="$PROJECT_DIR$/src/componentes/navbar/Navbar.java" />
-        <option value="$PROJECT_DIR$/src/componentes/navbar/navbar.fxml" />
-        <option value="$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml" />
-        <option value="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" />
-        <option value="$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java" />
         <option value="$PROJECT_DIR$/src/models/Cliente.java" />
-        <option value="$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java" />
-        <option value="$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java" />
-        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml" />
+        <option value="$PROJECT_DIR$/src/database/ConexaoBanco.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.alt.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagemAlt.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagemAlt/DiaCell.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagemAlt/ReservaListagemAlt.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagemAlt/dia.cell.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagemAlt/reserva.listagem.alt.fxml" />
+        <option value="$PROJECT_DIR$/src/utils/FormattedField.java" />
+        <option value="$PROJECT_DIR$/src/utils/BCrypt.java" />
+        <option value="$PROJECT_DIR$/src/models/calendario/Week.java" />
+        <option value="$PROJECT_DIR$/src/models/calendario/Day.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/cell/DiaCell.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/teste.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/navbar/navbar.fxml" />
         <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagem.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/edicao/cliente.edicao.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml" />
+        <option value="$PROJECT_DIR$/src/models/Grupo.java" />
+        <option value="$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml" />
+        <option value="$PROJECT_DIR$/src/models/Veiculo.java" />
+        <option value="$PROJECT_DIR$/src/models/Filial.java" />
+        <option value="$PROJECT_DIR$/src/models/Marca.java" />
+        <option value="$PROJECT_DIR$/src/models/Modelo.java" />
+        <option value="$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java" />
+        <option value="$PROJECT_DIR$/src/componentes/reserva/listagem/cell/dia.cell.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java" />
+        <option value="$PROJECT_DIR$/src/componentes/navbar/Navbar.java" />
+        <option value="$PROJECT_DIR$/src/componentes/veiculo/listagem/VeiculoListagem.java" />
+        <option value="$PROJECT_DIR$/src/componentes/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/componentes/Main.java" />
+        <option value="$PROJECT_DIR$/src/utils/Navigate.java" />
+        <option value="$PROJECT_DIR$/src/componentes/login/login.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml" />
+        <option value="$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java" />
+        <option value="$PROJECT_DIR$/db_script.sql" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -190,14 +285,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
               <item name="cliente" type="462c0819:PsiDirectoryNode" />
-              <item name="edicao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="componentes" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
               <item name="listagem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -205,7 +292,7 @@
               <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
@@ -249,12 +336,6 @@
               <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
               <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vocealuga" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vocealuga" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -270,10 +351,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/clx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\EDS\IdeaProjects\vocealuga\src\componentes\reserva\listagem" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="componentes.reserva.listagem" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\EDS\IdeaProjects\vocealuga\src\componentes\reserva\listagemAlt" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -309,7 +402,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="824ca69e-0ba2-4249-94d7-7da1e0fd2f7c" name="Default Changelist" comment="" />
+      <changelist id="1779a7fa-e712-4d91-88d7-7c11132b9115" name="Default Changelist" comment="" />
       <created>1554815034409</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -324,17 +417,18 @@
     <option name="totallyTimeSpent" value="24615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13408723" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30547947" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30119178" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4037199" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -344,283 +438,432 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13408723" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30547947" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32876712" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="daysOfWeek" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>month == 11</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/componentes/login/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagemAlt/ReservaListagemAlt.java" />
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagemAlt/reserva.listagem.alt.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagemAlt/dia.cell.fxml" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="308">
+          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/login/login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f5870dd3-6a6e-4e1a-88e3-4a9fddd4d6f7/console.sql">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-end-line="104" selection-end-column="192" />
+        <state relative-caret-position="206">
+          <caret line="383" column="22" selection-start-line="383" selection-start-column="22" selection-end-line="383" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="81" column="42" lean-forward="true" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/TableCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="77" column="42" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/cell/TextFieldTableCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="64" column="66" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="554" column="17" selection-start-line="554" selection-start-column="17" selection-end-line="554" selection-end-column="17" />
+          <folding>
+            <element signature="e#19327#19328#0" expanded="true" />
+            <element signature="e#19410#19411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Labeled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="421" column="22" selection-start-line="421" selection-start-column="22" selection-end-line="421" selection-end-column="22" />
+          <folding>
+            <element signature="e#15047#15048#0" expanded="true" />
+            <element signature="e#15096#15097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/BCrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="2407" column="17" selection-start-line="2407" selection-start-column="17" selection-end-line="2407" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/calendario/Week.java" />
+    <entry file="file://$PROJECT_DIR$/src/models/calendario/Day.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="668" column="19" selection-start-line="668" selection-start-column="19" selection-end-line="668" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/teste.fxml" />
     <entry file="file://$PROJECT_DIR$/src/componentes/cliente/edicao/cliente.edicao.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="97" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/ConexaoBanco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="142" selection-start-line="18" selection-start-column="142" selection-end-line="18" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/cadastro/ReservaCadastro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="21" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/FormattedField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="73" column="10" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="11" column="21" selection-end-line="107" selection-end-column="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="373" column="23" selection-start-line="373" selection-start-column="23" selection-end-line="373" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="678" column="18" selection-start-line="678" selection-start-column="18" selection-end-line="678" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="685" column="15" selection-start-line="685" selection-start-column="15" selection-end-line="685" selection-end-column="15" />
-          <folding>
-            <element signature="e#6390#6391#0" expanded="true" />
-            <element signature="e#6438#6439#0" expanded="true" />
-            <element signature="e#30042#30043#0" expanded="true" />
-            <element signature="e#30120#30121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/sql/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="158" column="32" lean-forward="true" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="32" />
-          <folding>
-            <element signature="e#6105#6106#0" expanded="true" />
-            <element signature="e#6167#6168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="460" column="19" selection-start-line="460" selection-start-column="19" selection-end-line="460" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/navbar/Navbar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/time/Month.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-381">
-          <caret line="170" column="33" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3333" column="18" selection-start-line="3333" selection-start-column="18" selection-end-line="3333" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componentes/navbar/navbar.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="171" selection-start-line="10" selection-start-column="171" selection-end-line="10" selection-end-column="171" />
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/cell/DiaCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="22" selection-start-line="22" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Cliente#0;class#Cliente#0" />
+            <element signature="method#Cliente#1;class#Cliente#0" />
+            <element signature="method#save#0;class#Cliente#0" />
+            <element signature="method#update#0;class#Cliente#0" />
+            <element signature="method#delete#0;class#Cliente#0" />
+            <element signature="method#all#0;class#Cliente#0" />
+            <element signature="method#findById#0;class#Cliente#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/reserva.listagem.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/listagem/veiculo.listagem.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/ConexaoBanco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="85" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/FormattedField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2865">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="649" column="15" selection-start-line="649" selection-start-column="15" selection-end-line="649" selection-end-column="15" />
+          <folding>
+            <element signature="e#28620#28621#0" expanded="true" />
+            <element signature="e#28671#28672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Filial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/ReservaListagem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+        <state relative-caret-position="563">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Day#0;class#ReservaListagem#0" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
             <element signature="class#Week#0;class#ReservaListagem#0" />
-            <element signature="method#Week#0;class#Week#0;class#ReservaListagem#0" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1539#1540#0" expanded="true" />
-            <element signature="e#1569#1570#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="class#DayCellFactory#0;class#ReservaListagem#0" />
+            <element signature="method#call#0;class#DayCellFactory#0;class#ReservaListagem#0" />
+            <element signature="class#DayCellValueFactory#0;class#ReservaListagem#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Grupo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Veiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="104" column="133" selection-start-line="104" selection-start-column="133" selection-end-line="104" selection-end-column="133" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Marca.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Modelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/reserva/listagem/cell/dia.cell.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/ClienteCadastro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/edicao/ClienteEdicao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/navbar/Navbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/listagem/VeiculoListagem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Navigate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/VeiculoCadastro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/login/login.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/cadastro/cliente.cadastro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="25" selection-start-line="33" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/ClienteListagem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#621#630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/cliente/listagem/cliente.listagem.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="14" column="71" lean-forward="true" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componentes/veiculo/cadastro/veiculo.cadastro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="226" column="24" selection-start-line="226" selection-start-column="24" selection-end-line="226" selection-end-column="24" />
         </state>
       </provider>
     </entry>

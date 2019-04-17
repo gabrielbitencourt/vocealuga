@@ -1,138 +1,168 @@
 package componentes.reserva.listagem;
 
+import componentes.reserva.listagem.cell.DiaCell;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.util.Callback;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class ReservaListagem implements Initializable {
 
 	Calendar cal = Calendar.getInstance();
 
 	@FXML TableView monthTable;
-	@FXML TableColumn domingoCol;
-	@FXML TableColumn segundaCol;
-	@FXML TableColumn tercaCol;
-	@FXML TableColumn quartaCol;
-	@FXML TableColumn quintaCol;
-	@FXML TableColumn sextaCol;
-	@FXML TableColumn sabadoCol;
+	@FXML TableColumn<Week, Week> domingoCol;
+	@FXML TableColumn<Week, Week> segundaCol;
+	@FXML TableColumn<Week, Week> tercaCol;
+	@FXML TableColumn<Week, Week> quartaCol;
+	@FXML TableColumn<Week, Week> quintaCol;
+	@FXML TableColumn<Week, Week> sextaCol;
+	@FXML TableColumn<Week, Week> sabadoCol;
 
 	@FXML Label mesLabel;
 
 	public class Day {
-		int weekday;
-		int monthday;
+		public int weekday;
+		public int day;
+		public int month;
+		public int year;
 
-		public Day(int week, int month) {
-			this.monthday = month;
+		public Day(int week, int day, int month, int year) {
 			this.weekday = week;
+			this.day = day;
+			this.month = month;
+			this.year = year;
 		}
 
 		@Override
 		public String toString() {
-			return this.monthday + "";
+			return this.day + "/" + this.month + "/" + this.year;
 		}
 	}
-
 	public class Week {
 
-		ArrayList<Day> days = new ArrayList<Day>();
+		Map<Integer, Day> days = new HashMap<>();
 
 		public Week(ArrayList<Day> arr) {
 			for (Day day : arr) {
-				days.add(day);
+				days.put(day.weekday, day);
+			}
+		}
+	}
+
+	public class DayCellFactory implements Callback<TableColumn<Week, Week>, TableCell<Week, Week>> {
+
+		int day;
+
+		public DayCellFactory(int day) {
+			this.day = day;
+		}
+
+		@Override
+		public TableCell<Week, Week> call(TableColumn<Week, Week> col) {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("./cell/dia.cell.fxml"));
+			int day = this.day;
+			try {
+				final Node node = loader.load();
+				return new TableCell<Week, Week>() {
+
+					@Override
+					public void updateItem(final Week week, boolean empty) {
+						if (week != null && week.days != null && week.days.get(day) != null) {
+							super.updateItem(week, false);
+
+							setGraphic(node);
+							DiaCell controller = loader.getController();
+							controller.init(week.days.get(day));
+
+						} else {
+							super.updateItem(week, true);
+							setGraphic(null);
+						}
+					}
+				};
+
+			} catch (IOException e) {
+				e.printStackTrace();
+				return null;
 			}
 		}
 
-		public String getDom() {
-			return days.get(0).toString();
-		}
+	}
+	public class DayCellValueFactory implements Callback<CellDataFeatures<Week, Week>, ObservableValue<Week>> {
+		@Override public ObservableValue<Week> call(CellDataFeatures<Week, Week> features) {
+			return new ReadOnlyObjectWrapper(features.getValue());
 
-		public String getSeg() {
-			return days.get(1) != null ? days.get(1).toString() : "la";
-		}
-
-		public String getTer() {
-			return days.get(2).toString();
-		}
-
-		public String getQua() {
-			return days.get(3).toString();
-		}
-
-		public String getQui() {
-			return days.get(4).toString();
-		}
-
-		public String getSex() {
-			return days.get(5).toString();
-		}
-
-		public String getSab() {
-			return days.get(6).toString();
 		}
 	}
 
 	@FXML
 	public void initialize(URL location, ResourceBundle resources) {
-		domingoCol.setCellValueFactory(new PropertyValueFactory<Week, String>("dom"));
-		segundaCol.setCellValueFactory(new PropertyValueFactory<Week, String>("seg"));
-		tercaCol.setCellValueFactory(new PropertyValueFactory<Week, String>("ter"));
-		quartaCol.setCellValueFactory(new PropertyValueFactory<Week, String>("qua"));
-		quintaCol.setCellValueFactory(new PropertyValueFactory<Week, String>("qui"));
-		sextaCol.setCellValueFactory(new PropertyValueFactory<Week, String>("sex"));
-		sabadoCol.setCellValueFactory(new PropertyValueFactory<Week, String>("sab"));
+		monthTable.getSelectionModel().setCellSelectionEnabled(true);
+
+		domingoCol.setCellValueFactory(new DayCellValueFactory());
+		segundaCol.setCellValueFactory(new DayCellValueFactory());
+		tercaCol.setCellValueFactory(new DayCellValueFactory());
+		quartaCol.setCellValueFactory(new DayCellValueFactory());
+		quintaCol.setCellValueFactory(new DayCellValueFactory());
+		sextaCol.setCellValueFactory(new DayCellValueFactory());
+		sabadoCol.setCellValueFactory(new DayCellValueFactory());
+
+		domingoCol.setCellFactory(new DayCellFactory(1));
+		segundaCol.setCellFactory(new DayCellFactory(2));
+		tercaCol.setCellFactory(new DayCellFactory(3));
+		quartaCol.setCellFactory(new DayCellFactory(4));
+		quintaCol.setCellFactory(new DayCellFactory(5));
+		sextaCol.setCellFactory(new DayCellFactory(6));
+		sabadoCol.setCellFactory(new DayCellFactory(7));
 
 		Date current = new Date(System.currentTimeMillis());
 		cal.setTime(current);
+		cal.setMinimalDaysInFirstWeek(1);
 		this.initMes();
 	}
 
 	public void initMes() {
-		System.out.println(cal);
-
 		monthTable.getItems().clear();
-		mesLabel.setText(Month.of(cal.get(Calendar.MONTH) + 1).name());
+		mesLabel.setText(Month.of(cal.get(Calendar.MONTH) + 1).name() + "/" + cal.get(Calendar.YEAR));
 
 		cal.set(Calendar.DAY_OF_MONTH, 1);
 		int month = cal.get(Calendar.MONTH);
+		int year = cal.get(Calendar.YEAR);
 
-		cal.set(Calendar.DAY_OF_WEEK, 1);
-		while (cal.get(Calendar.MONTH) <= month) {
+		while (cal.get(Calendar.MONTH) == month) {
 
 			ArrayList<Day> daysOfWeek = new ArrayList<>();
 
-			int week = cal.get(Calendar.WEEK_OF_YEAR);
-			while (cal.get(Calendar.WEEK_OF_YEAR) == week) {
-
-				int weekDay = cal.get(Calendar.DAY_OF_WEEK);
-				int monthDay = cal.get(Calendar.DAY_OF_MONTH);
-
-				daysOfWeek.add(new Day(weekDay, monthDay));
+			while (true) {
+				daysOfWeek.add(new Day(cal.get(Calendar.DAY_OF_WEEK), cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR)));
 				cal.add(Calendar.DAY_OF_MONTH, 1);
-
+				if (cal.get(Calendar.DAY_OF_WEEK) == 1 || cal.get(Calendar.MONTH) > month) {
+					break;
+				}
 			}
 
 			Week weekData = new Week(daysOfWeek);
 			monthTable.getItems().add(weekData);
 
 		}
-		System.out.println(cal);
-		cal.add(Calendar.DAY_OF_YEAR, -28);
+		cal.set(Calendar.YEAR, year);
+		cal.set(Calendar.MONTH, month);
 		cal.set(Calendar.DAY_OF_MONTH, 1);
-		System.out.println(cal);
-
 	}
 
 	public void nextMes(ActionEvent e) {

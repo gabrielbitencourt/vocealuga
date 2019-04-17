@@ -17,7 +17,7 @@ public class Login {
 
         try {
             if (Funcionario.authenticate(nameField.getText(), passwordField.getText()) != null) {
-                Navigate.to(event, this.getClass(), "cliente/listagem/cliente.listagem.fxml", "VocêAluga - Painel");
+                Navigate.to(this.getClass(), "cliente/listagem/cliente.listagem.fxml", "VocêAluga - Painel");
             }
             else {
                 /*

@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
  * This component receives a mask that dictate the valid input for this field.
  * @author gbfragoso
  * @version 2.1
+ * @source https://github.com/gbfragoso/MaskedTextField/
  */
 public class FormattedField extends TextField {
 

@@ -26,22 +26,27 @@ public class ClienteListagem implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             clientes = Cliente.all();
-            for (Cliente c : clientes) {
-                TitledPane tp = new TitledPane();
-                tp.setText(c.toString());
+            if (clientes.size() < 1) {
+                // TODO - mostrar label com mensagem que não há nenhum cliente
+            }
+            else {
+                for (Cliente c : clientes) {
+                    TitledPane tp = new TitledPane();
+                    tp.setText(c.toString());
 
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/componentes/cliente/edicao/cliente.edicao.fxml"));
-                    tp.setContent(loader.load());
-                    clientesLista.getPanes().add(tp);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/componentes/cliente/edicao/cliente.edicao.fxml"));
+                        tp.setContent(loader.load());
+                        clientesLista.getPanes().add(tp);
 
-                    ClienteEdicao controller = loader.getController();
-                    controller.init(c, tp);
+                        ClienteEdicao controller = loader.getController();
+                        controller.init(c, tp);
 
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                 }
-
             }
 
         } catch (SQLException e) {
@@ -51,11 +56,11 @@ public class ClienteListagem implements Initializable {
     }
 
     public void acessoClintePainel(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/edicao/cliente.edicao.fxml");
+        Navigate.to(this.getClass(), "cliente/edicao/cliente.edicao.fxml");
     }
 
     public void acessoCadastroCliente(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/cadastro/cliente.cadastro.fxml");
+        Navigate.to(this.getClass(), "cliente/cadastro/cliente.cadastro.fxml");
     }
 
 }

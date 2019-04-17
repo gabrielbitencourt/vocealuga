@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.listagem.VeiculoListagem">
-
-    <fx:include source="../../navbar/navbar.fxml" />
-   <Button layoutX="487.0" layoutY="359.0" mnemonicParsing="false" text="Novo Veículo" />
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
 
 
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.listagem.VeiculoListagem">
+    <top>
+        <fx:include source="../../navbar/navbar.fxml" />
+    </top>
+    <center>
+        <TreeView fx:id="veiculosList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <Button mnemonicParsing="false" onAction="#novoVeiculo" text="Novo Veículo" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>

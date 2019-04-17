@@ -27,7 +27,7 @@ public class ClienteCadastro {
     @FXML FormattedField celularField;
 
     public void cancelar(ActionEvent event) throws IOException {
-        Navigate.to(event, this.getClass(), "cliente/listagem/cliente.listagem.fxml");
+        Navigate.to(this.getClass(), "cliente/listagem/cliente.listagem.fxml");
     }
 
     public void cadastrarCliente(ActionEvent event) {
@@ -59,7 +59,7 @@ public class ClienteCadastro {
                         }
                         else if (response == ButtonType.NO) {
                             try {
-                                Navigate.to(event, this.getClass(), "cliente/listagem/cliente.listagem.fxml");
+                                Navigate.to(this.getClass(), "cliente/listagem/cliente.listagem.fxml");
 
                             } catch (IOException e) {
                                 e.printStackTrace();

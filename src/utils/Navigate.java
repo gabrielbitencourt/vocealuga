@@ -11,21 +11,24 @@ import java.io.IOException;
 
 public class Navigate {
 
-    public static void to(ActionEvent event, Class classe, String to, String title) throws IOException {
+    private static Stage stage;
+
+    public static void to(Class classe, String to, String title) throws IOException {
         Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
-        Scene scene = new Scene(view);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setTitle(title);
-        window.setScene(scene);
-        window.show();
+        Scene scene = new Scene(view, stage.getWidth(), stage.getHeight());
+        stage.setTitle(title);
+        stage.setScene(scene);
     }
 
-    public static void to(ActionEvent event, Class classe, String to) throws IOException {
+    public static void to(Class classe, String to) throws IOException {
         Parent view = FXMLLoader.load(classe.getResource("/componentes/" + to));
-        Scene scene = new Scene(view);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
+        Scene scene = new Scene(view, stage.getWidth(), stage.getHeight());
+
+        stage.setScene(scene);
+    }
+
+    public static void setStage(Stage stg) {
+        Navigate.stage = stg;
     }
 
 }
