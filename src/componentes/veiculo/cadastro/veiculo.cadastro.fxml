@@ -3,10 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
 <?import utils.FormattedField?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.cadastro.VeiculoCadastro">
@@ -29,7 +29,7 @@
       		<ChoiceBox fx:id="modeloSelect" layoutX="295.0" layoutY="135.0" prefHeight="27.0" prefWidth="172.0" />
       
       		<Label layoutX="128.0" layoutY="178.0" text="Placa" />
-      		<TextField fx:id="placaField" layoutX="128.0" layoutY="201.0" prefHeight="26.0" prefWidth="106.0" />
+      		<FormattedField fx:id="placaField" layoutX="128.0" layoutY="201.0" mask="AAAAAAA" prefHeight="26.0" prefWidth="106.0" />
       
       		<Label layoutX="244.0" layoutY="178.0" text="Data da Compra" />
       		<FormattedField fx:id="dataField" layoutX="249.0" layoutY="201.0" mask="##/##/####" prefHeight="27.0" prefWidth="100.0" />

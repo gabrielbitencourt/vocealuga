@@ -3,23 +3,22 @@ package componentes.veiculo.cadastro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import models.Filial;
-import models.Marca;
-import models.Modelo;
-import models.Veiculo;
+import models.*;
 import utils.FormattedField;
 import utils.Navigate;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
+import java.sql.Date;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class VeiculoCadastro implements Initializable {
 
@@ -29,12 +28,15 @@ public class VeiculoCadastro implements Initializable {
 
     @FXML ChoiceBox<Marca> marcaSelect;
     @FXML ChoiceBox<Modelo> modeloSelect;
-    @FXML TextField placaField;
+    @FXML FormattedField placaField;
     @FXML FormattedField dataField;
     @FXML ChoiceBox<Filial> filialSelect;
     @FXML TextField kmField;
 
     public void initialize(URL location, ResourceBundle resources) {
+        Button btn = new Button("H");
+        btn.setOnAction(this::btnHoje);
+        dataField.setRight(btn);
         try {
             this.marcas = Marca.all();
             this.modelos = Modelo.byMarca();
@@ -67,6 +69,28 @@ public class VeiculoCadastro implements Initializable {
         this.modeloSelect.setDisable(marca == null);
     }
 
+    public void btnHoje(ActionEvent event) {
+        this.dataField.setText(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDate.now()));
+    }
+
     public void novoVeiculo(ActionEvent event) throws IOException {
+        Date compradoEm = null;
+        try {
+            compradoEm = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(this.dataField.getText()).getTime());
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        Veiculo veiculo = new Veiculo(this.placaField.getText(), Double.valueOf(this.kmField.getText()), compradoEm,
+                true, Funcionario.filial_id, this.modeloSelect.getValue().id);
+        try {
+            veiculo.save();
+            Navigate.to(this.getClass(), "veiculo/listagem/veiculo.listagem.fxml");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // TODO - mensagem de erro
+        }
     }
 }

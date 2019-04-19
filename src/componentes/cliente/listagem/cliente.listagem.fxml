@@ -22,7 +22,7 @@
                         <HBox.margin>
                            <Insets left="5.0" />
                         </HBox.margin></Label>
-                            <FormattedField mask="###.###.###-##">
+                            <FormattedField mask="###.###.###-##" fx:id="cpfFilter">
                         <HBox.margin>
                            <Insets />
                         </HBox.margin></FormattedField>

@@ -8,7 +8,7 @@ import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.control.IndexRange;
-import javafx.scene.control.TextField;
+import utils.CustomTextField.CustomTextField;
 
 /**
  * This component receives a mask that dictate the valid input for this field.
@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
  * @version 2.1
  * @source https://github.com/gbfragoso/MaskedTextField/
  */
-public class FormattedField extends TextField {
+public class FormattedField extends CustomTextField {
 
     private static final char MASK_ESCAPE = '\'';
     private static final char MASK_NUMBER = '#';
