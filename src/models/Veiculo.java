@@ -46,6 +46,10 @@ public class Veiculo {
         this.filial_id = filial_id;
         this.modelo_id = modelo_id;
     }
+    
+    public String toString() {
+        return this.placa;
+    }
 
     public void save() throws SQLException {
         Connection conn = new ConexaoBanco().getConnection();

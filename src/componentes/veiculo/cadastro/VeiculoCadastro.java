@@ -50,6 +50,9 @@ public class VeiculoCadastro implements Initializable {
 
             for (Filial f : filiais) {
                 this.filialSelect.getItems().add(f);
+                if (f.id == Funcionario.filial_id) {
+                    filialSelect.setValue(f);
+                }
             }
 
         } catch (SQLException e) {

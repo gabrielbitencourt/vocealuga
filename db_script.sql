@@ -21,7 +21,7 @@ CREATE TABLE `funcionarios` (
 	`sobrenome` VARCHAR(255) NOT NULL,
 	`usuario` VARCHAR(255) NOT NULL UNIQUE,
 	`senha` VARCHAR(512) NOT NULL,
-	`senha` TINYINT(1) NOT NULL DEFAULT 0,
+	`gerente` TINYINT(1) NOT NULL DEFAULT 0,
 	`filial_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -60,6 +60,7 @@ CREATE TABLE `veiculos` (
 CREATE TABLE `reservas` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`veiculo_id` VARCHAR(7) NOT NULL,
+	`cliente_id` VARCHAR(11) NOT NULL,
 	`inicio` DATE NOT NULL,
 	`fim` DATE NOT NULL,
 	`pontos` INT NOT NULL DEFAULT 0,
@@ -115,6 +116,8 @@ ALTER TABLE `veiculos` ADD CONSTRAINT `veiculos_fk0` FOREIGN KEY (`filial_id`) R
 ALTER TABLE `veiculos` ADD CONSTRAINT `veiculos_fk1` FOREIGN KEY (`modelo_id`) REFERENCES `modelos`(`id`);
 
 ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk0` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos`(`placa`);
+
+ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes`(`cpf`);
 
 ALTER TABLE `manutencoes` ADD CONSTRAINT `manutencoes_fk0` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos`(`placa`);
 

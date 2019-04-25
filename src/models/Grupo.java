@@ -18,6 +18,10 @@ public class Grupo {
         this.nome = rs.getString("nome");
     }
 
+    public String toString() {
+        return this.nome;
+    }
+
     public static ArrayList<Grupo> all() throws SQLException {
         ArrayList<Grupo> result = new ArrayList<>();
         Connection conn = new ConexaoBanco().getConnection();

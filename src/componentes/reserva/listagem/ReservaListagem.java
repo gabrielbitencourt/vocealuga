@@ -103,7 +103,6 @@ public class ReservaListagem implements Initializable {
 	public class DayCellValueFactory implements Callback<CellDataFeatures<Week, Week>, ObservableValue<Week>> {
 		@Override public ObservableValue<Week> call(CellDataFeatures<Week, Week> features) {
 			return new ReadOnlyObjectWrapper(features.getValue());
-
 		}
 	}
 
