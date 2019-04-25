@@ -7,9 +7,13 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import models.*;
 import utils.FormattedField;
+import utils.Navigate;
 import utils.Navigate.NavInit;
 
+import java.sql.Date;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReservaNova implements NavInit {
@@ -17,45 +21,45 @@ public class ReservaNova implements NavInit {
     @FXML Label reservaLabel;
     @FXML Label grupoLabel;
     @FXML Label ouLabel;
-    @FXML FormattedField retirada;
-    @FXML FormattedField devolucao;
-    @FXML ChoiceBox<Filial> filiais;
-    @FXML ChoiceBox<Veiculo> veiculos;
-    @FXML ChoiceBox<Grupo> grupos;
-    @FXML ChoiceBox<Cliente> clientes;
+    @FXML FormattedField retiradaField;
+    @FXML FormattedField entregaField;
+    @FXML ChoiceBox<Filial> filialSelect;
+    @FXML ChoiceBox<Veiculo> veiculoSelect;
+    @FXML ChoiceBox<Grupo> grupoSelect;
+    @FXML ChoiceBox<Cliente> clienteSelect;
 
     public void init(Object... params) {
         Day dia = (Day) params[0];
-        retirada.setText(dia.toString());
+        retiradaField.setText(dia.toString());
 
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(System.currentTimeMillis());
         if (cal.get(Calendar.YEAR) == dia.year && cal.get(Calendar.MONTH) == dia.month && cal.get(Calendar.DAY_OF_MONTH) == dia.day) {
             reservaLabel.setText("Aluguel imeadiato");
-            grupos.setVisible(false);
+            grupoSelect.setVisible(false);
             ouLabel.setVisible(false);
             grupoLabel.setVisible(false);
-            veiculos.setPrefWidth(veiculos.getWidth() + (grupos.getLayoutX() - veiculos.getLayoutX()));
+            veiculoSelect.setPrefWidth(veiculoSelect.getWidth() + (grupoSelect.getLayoutX() - veiculoSelect.getLayoutX()));
         }
 
         try {
             for (Filial f : Filial.all()) {
-                filiais.getItems().add(f);
+                filialSelect.getItems().add(f);
                 if (f.id == Funcionario.filial_id) {
-                    filiais.setValue(f);
+                    filialSelect.setValue(f);
                 }
             }
 
             for (Veiculo v : Veiculo.all()) {
-                veiculos.getItems().add(v);
+                veiculoSelect.getItems().add(v);
             }
 
             for (Grupo g : Grupo.all()) {
-                grupos.getItems().add(g);
+                grupoSelect.getItems().add(g);
             }
 
             for (Cliente c : Cliente.all()) {
-                clientes.getItems().add(c);
+                clienteSelect.getItems().add(c);
             }
 
         } catch (SQLException e) {
@@ -64,19 +68,44 @@ public class ReservaNova implements NavInit {
     }
 
     public void selectedVeiculo() {
-        if (this.veiculos.getValue() != null) {
-            this.grupos.setValue(null);
+        if (this.veiculoSelect.getValue() != null) {
+            this.grupoSelect.setValue(null);
         }
     }
 
     public void selectedGrupo() {
-        if (this.grupos.getValue() != null) {
-            this.veiculos.setValue(null);
+        if (this.grupoSelect.getValue() != null) {
+            this.veiculoSelect.setValue(null);
         }
     }
 
     public void novaReserva(ActionEvent event) {
+        Date retirada = null;
+        Date entrega = null;
+        try {
+            retirada = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(retiradaField.getText()).getTime());
+            entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getText()).getTime());
 
+        } catch (ParseException e) {
+            e.printStackTrace();
+            // TODO mensagem de erro por causa do formato da data
+        }
+
+        Reserva nova;
+        if (this.grupoSelect.getValue() != null) {
+            nova = new Reserva(retirada, entrega, filialSelect.getValue().id, clienteSelect.getValue().cpf, this.grupoSelect.getValue().id);
+        }
+        else {
+            nova = new Reserva(retirada, entrega, filialSelect.getValue().id, clienteSelect.getValue().cpf, this.veiculoSelect.getValue().modelo.grupo_id, this.veiculoSelect.getValue().placa);
+        }
+
+        try {
+            nova.save();
+            Navigate.to(this.getClass(), "reserva/listagem/reserva.listagem.fxml");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

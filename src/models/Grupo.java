@@ -24,7 +24,7 @@ public class Grupo {
 
     public static ArrayList<Grupo> all() throws SQLException {
         ArrayList<Grupo> result = new ArrayList<>();
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM grupos");
         ResultSet rs = statement.executeQuery();
 

@@ -31,7 +31,7 @@ public class Marca {
 
     public static ArrayList<Marca> all() throws SQLException {
         ArrayList<Marca> result = new ArrayList<>();
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM marcas");
         ResultSet rs = statement.executeQuery();
 

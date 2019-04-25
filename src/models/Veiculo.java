@@ -4,8 +4,6 @@ import database.ConexaoBanco;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Veiculo {
 
@@ -13,10 +11,6 @@ public class Veiculo {
     public Double km;
     public Date comprado;
     public boolean disponivel;
-
-
-    public Grupo grupo;
-    public int grupo_id;
 
     public Modelo modelo;
     public int modelo_id;
@@ -31,6 +25,8 @@ public class Veiculo {
             this.comprado = rs.getDate("comprado");
             this.disponivel = rs.getBoolean("disponivel");
             this.filial_id = rs.getInt("filial_id");
+            this.modelo_id = rs.getInt("modelo_id");
+            this.modelo = new Modelo(rs);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -52,7 +48,7 @@ public class Veiculo {
     }
 
     public void save() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("INSERT INTO veiculos (placa, km, disponivel, comprado, filial_id, modelo_id) VALUES (?, ?, ?, ?, ?, ?)");
         statement.setString(1, this.placa);
         statement.setDouble(2, this.km);
@@ -67,7 +63,7 @@ public class Veiculo {
     }
 
     public boolean update() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("UPDATE veiculos SET km = ?, disponivel = ?, filial_id = ? WHERE placa=?");
         statement.setDouble(1, this.km);
         statement.setBoolean(2, this.disponivel);
@@ -81,7 +77,7 @@ public class Veiculo {
     }
 
     public boolean delete() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("DELETE FROM veiculos WHERE placa=?");
         statement.setString(1, this.placa);
 
@@ -93,8 +89,8 @@ public class Veiculo {
 
     public static ArrayList<Veiculo> all() throws SQLException {
         ArrayList<Veiculo> result = new ArrayList<>();
-        Connection conn = new ConexaoBanco().getConnection();
-        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos");
+        Connection conn = ConexaoBanco.getConnection();
+        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos LEFT JOIN modelos ON veiculos.modelo_id = modelos.id");
         ResultSet rs = statement.executeQuery();
 
         while(rs.next()) {
@@ -105,14 +101,13 @@ public class Veiculo {
 
     public static ArrayList<Veiculo> ofFilial(int filial_id) throws SQLException {
         ArrayList<Veiculo> result = new ArrayList<>();
-        Connection conn = new ConexaoBanco().getConnection();
-        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos WHERE filial_id = ?");
+        Connection conn = ConexaoBanco.getConnection();
+        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos LEFT JOIN modelos ON veiculos.modelo_id = modelos.id WHERE veiculos.filial_id = ?");
         statement.setInt(1, filial_id);
 
         ResultSet rs = statement.executeQuery();
 
         while(rs.next()) {
-            System.out.println(rs);
             result.add(new Veiculo(rs));
         }
 
@@ -121,8 +116,8 @@ public class Veiculo {
     }
 
     public static Veiculo findById(String placa) throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
-        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos WHERE placa=?");
+        Connection conn = ConexaoBanco.getConnection();
+        PreparedStatement statement = conn.prepareStatement("SELECT * FROM veiculos LEFT JOIN modelos ON veiculos.modelo_id = modelos.id WHERE veiculos.placa=? ");
         statement.setString(1, placa);
         ResultSet rs = statement.executeQuery();
         if (rs.first()) {

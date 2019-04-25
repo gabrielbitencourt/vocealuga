@@ -64,7 +64,7 @@ public class Cliente {
     }
 
     public boolean save() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, cnh, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         statement.setString(1, this.nome);
         statement.setString(2, this.sobrenome);
@@ -82,7 +82,7 @@ public class Cliente {
     }
 
     public boolean update() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("UPDATE clientes SET nome = ?, sobrenome = ?, endereco = ?, email = ?, celular = ? WHERE cpf=?");
         statement.setString(1, this.nome);
         statement.setString(2, this.sobrenome);
@@ -98,7 +98,7 @@ public class Cliente {
     }
 
     public boolean delete() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("DELETE FROM clientes WHERE cpf=?");
         statement.setString(1, this.cpf);
 
@@ -110,7 +110,7 @@ public class Cliente {
 
     public static ArrayList<Cliente> all() throws SQLException {
         ArrayList<Cliente> result = new ArrayList<Cliente>();
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM clientes");
         ResultSet rs = statement.executeQuery();
 
@@ -121,7 +121,7 @@ public class Cliente {
     }
 
     public static Cliente findById(String cpf) throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM clientes WHERE cpf=?");
         statement.setString(1, cpf);
         ResultSet rs = statement.executeQuery();

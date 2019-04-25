@@ -28,7 +28,7 @@ public class Filial {
     }
 
     public boolean save() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("INSERT INTO filiais (nome) VALUES (?)");
         statement.setString(1, this.nome);
 
@@ -39,7 +39,7 @@ public class Filial {
     }
 
     public boolean update() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("UPDATE filiais SET nome = ? WHERE id=?");
         statement.setString(1, this.nome);
 
@@ -51,7 +51,7 @@ public class Filial {
     }
 
     public boolean delete() throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("DELETE FROM filiais WHERE id=?");
         statement.setInt(1, this.id);
 
@@ -63,7 +63,7 @@ public class Filial {
 
     public static ArrayList<Filial> all() throws SQLException {
         ArrayList<Filial> result = new ArrayList<>();
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM filiais");
         ResultSet rs = statement.executeQuery();
 
@@ -74,7 +74,7 @@ public class Filial {
     }
 
     public static Filial findById(int id) throws SQLException {
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("SELECT * FROM filiais WHERE id=?");
         statement.setInt(1, id);
         ResultSet rs = statement.executeQuery();

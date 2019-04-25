@@ -26,7 +26,7 @@ public abstract class Funcionario {
 
     public static boolean authenticate(String login, String password) throws SQLException, RuntimeException {
         try {
-            Connection conn = new ConexaoBanco().getConnection();
+            Connection conn = ConexaoBanco.getConnection();
             PreparedStatement statement = conn.prepareStatement("SELECT * FROM funcionarios WHERE usuario=?");
             statement.setString(1, login);
 
