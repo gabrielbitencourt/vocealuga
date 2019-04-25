@@ -1,6 +1,10 @@
+.DS_Store
+
+out/
 out/*
-*/.idea
-.idea
+
+bin/
+bin/*
+
 .idea/
 .idea/*
-/bin/

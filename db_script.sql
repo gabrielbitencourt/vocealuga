@@ -21,7 +21,7 @@ CREATE TABLE `funcionarios` (
 	`sobrenome` VARCHAR(255) NOT NULL,
 	`usuario` VARCHAR(255) NOT NULL UNIQUE,
 	`senha` VARCHAR(512) NOT NULL,
-	`senha` TINYINT(1) NOT NULL DEFAULT 0,
+	`gerente` TINYINT(1) NOT NULL DEFAULT 0,
 	`filial_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
