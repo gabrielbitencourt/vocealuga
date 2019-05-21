@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -23,24 +24,24 @@
                 </Label>
 
                 <Label layoutX="130.0" layoutY="92.0" text="Retirada em" />
-                <FormattedField fx:id="retirada" disable="true" layoutX="130.0" layoutY="116.0" mask="##/##/####" prefHeight="25.0" prefWidth="90.0" />
+                <FormattedField fx:id="retiradaField" disable="true" layoutX="130.0" layoutY="116.0" mask="##/##/####" prefHeight="25.0" prefWidth="90.0" />
 
                 <Label layoutX="234.0" layoutY="92.0" text="Devolução em" />
-                <FormattedField fx:id="devolucao" layoutX="234.0" layoutY="116.0" mask="##/##/####" prefHeight="25.0" prefWidth="90.0" />
+                <DatePicker fx:id="entregaField" layoutX="234.0" layoutY="116.0" prefHeight="25.0" prefWidth="90.0" />
 
                 <Label layoutX="337.0" layoutY="92.0" text="Local de Retirada" />
-                <ChoiceBox fx:id="filiais" layoutX="337.0" layoutY="116.0" prefHeight="25.0" prefWidth="133.0" />
+                <ChoiceBox fx:id="filialSelect" layoutX="337.0" layoutY="116.0" prefHeight="25.0" prefWidth="133.0" />
 
                 <Label layoutX="130.0" layoutY="154.0" text="Modelo do Veículo" />
-                <ChoiceBox fx:id="veiculos" onAction="#selectedVeiculo" layoutX="130.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" />
+                <ChoiceBox fx:id="veiculoSelect" layoutX="130.0" layoutY="178.0" onAction="#selectedVeiculo" prefHeight="25.0" prefWidth="150.0" />
 
                 <Label fx:id="ouLabel" layoutX="293.0" layoutY="182.0" text="ou" />
 
                 <Label fx:id="grupoLabel" layoutX="320.0" layoutY="154.0" text="Grupo do Veículo" />
-                <ChoiceBox fx:id="grupos" onAction="#selectedGrupo" layoutX="320.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" />
+                <ChoiceBox fx:id="grupoSelect" layoutX="320.0" layoutY="178.0" onAction="#selectedGrupo" prefHeight="25.0" prefWidth="150.0" />
 
                 <Label layoutX="130.0" layoutY="213.0" text="Motorista" />
-                <ChoiceBox fx:id="clientes" layoutX="130.0" layoutY="237.0" prefHeight="25.0" prefWidth="340.0" />
+                <ChoiceBox fx:id="clienteSelect" layoutX="130.0" layoutY="237.0" prefHeight="25.0" prefWidth="340.0" />
 
                 <Button layoutX="130.0" layoutY="312.0" mnemonicParsing="false" onAction="#novaReserva" prefHeight="27.0" prefWidth="340.0" text="Reservar" />
 

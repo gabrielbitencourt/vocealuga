@@ -4,6 +4,7 @@ import componentes.reserva.listagem.ReservaListagem.Day;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import models.*;
 import utils.FormattedField;
@@ -14,6 +15,7 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class ReservaNova implements NavInit {
@@ -22,7 +24,7 @@ public class ReservaNova implements NavInit {
     @FXML Label grupoLabel;
     @FXML Label ouLabel;
     @FXML FormattedField retiradaField;
-    @FXML FormattedField entregaField;
+    @FXML DatePicker entregaField;
     @FXML ChoiceBox<Filial> filialSelect;
     @FXML ChoiceBox<Veiculo> veiculoSelect;
     @FXML ChoiceBox<Grupo> grupoSelect;
@@ -50,6 +52,8 @@ public class ReservaNova implements NavInit {
                 }
             }
 
+            // TODO - mostrar apenas veiculos disponiveis
+            // veiculos disponiveis sao aqueles que nao estao reservados na data preenchida (campo disabilitado antes do preenchimento da data)
             for (Veiculo v : Veiculo.all()) {
                 veiculoSelect.getItems().add(v);
             }
@@ -83,8 +87,10 @@ public class ReservaNova implements NavInit {
         Date retirada = null;
         Date entrega = null;
         try {
+            // TODO (BUG) - data esta voltando um dia do selecionado
             retirada = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(retiradaField.getText()).getTime());
-            entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getText()).getTime());
+//            entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getText()).getTime());
+            entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).getTime());
 
         } catch (ParseException e) {
             e.printStackTrace();
