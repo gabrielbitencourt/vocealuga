@@ -1,41 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import utils.FormattedField?>
 
-<AnchorPane prefHeight="292.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.edicao.ClienteEdicao">
-   <children>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.cliente.edicao.ClienteEdicao">
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="131.0" layoutY="28.0" text="Nome" />
-       <TextField fx:id="nomeField" layoutX="131.0" layoutY="51.0" prefHeight="26.0" prefWidth="106.0" />
+                                <Label text="Nome" />
+                                <TextField fx:id="nomeField" prefHeight="26.0" prefWidth="106.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="247.0" layoutY="28.0" text="Sobrenome" />
-       <TextField fx:id="sobrenomeField" layoutX="247.0" layoutY="51.0" prefHeight="26.0" prefWidth="223.0" />
+                                <Label text="Sobrenome" />
+                                <TextField fx:id="sobrenomeField" prefHeight="26.0" prefWidth="223.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            <HBox>
+               <children>
+                      <VBox HBox.hgrow="ALWAYS">
+                          <children>
 
-       <Label layoutX="131.0" layoutY="84.0" text="Endereço" />
-       <TextField fx:id="enderecoField" layoutX="131.0" layoutY="107.0" prefHeight="26.0" prefWidth="339.0" promptText="ex.: Rua dos Bobos, 0 apto 1 - Bairro - Cidade/ES" />
+                              <Label text="Endereço" />
+                              <TextField fx:id="enderecoField" prefHeight="26.0" prefWidth="339.0" promptText="ex.: Rua dos Bobos, 0 apto 1 - Bairro - Cidade/ES" />
+                          </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                      </VBox>
+               </children>
+            </HBox>
+                <HBox>
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="130.0" layoutY="138.0" text="CPF" />
-       <FormattedField fx:id="cpfField" disable="true" layoutX="131.0" layoutY="159.0" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
+                                <Label text="CPF" />
+                                <FormattedField fx:id="cpfField" disable="true" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="247.0" layoutY="138.0" text="CNH" />
-       <FormattedField fx:id="cnhField" disable="true" layoutX="247.0" layoutY="159.0" mask="###########" prefHeight="26.0" prefWidth="106.0" />
+                                <Label text="CNH" />
+                                <FormattedField fx:id="cnhField" disable="true" mask="###########" prefHeight="26.0" prefWidth="106.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="362.0" layoutY="138.0" text="Data de Nascimento" />
-       <FormattedField fx:id="nascimentoField" disable="true" layoutX="364.0" layoutY="160.0" mask="##/##/####" prefHeight="25.0" prefWidth="106.0" />
+                                <Label text="Data de Nascimento" />
+                                <FormattedField fx:id="nascimentoField" disable="true" mask="##/##/####" prefHeight="25.0" prefWidth="106.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="132.0" layoutY="191.0" text="E-mail" />
-       <TextField fx:id="emailField" layoutX="131.0" layoutY="212.0" prefHeight="26.0" prefWidth="223.0" />
+                                <Label text="E-mail" />
+                                <TextField fx:id="emailField" prefHeight="26.0" prefWidth="223.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
 
-       <Label layoutX="364.0" layoutY="191.0" text="Celular" />
-       <FormattedField fx:id="celularField" layoutX="364.0" layoutY="212.0" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
-
-      <Button layoutX="253.0" layoutY="253.0" mnemonicParsing="false" onAction="#deletarCliente" text="Deletar Cliente" />
-      <Button layoutX="367.0" layoutY="253.0" mnemonicParsing="false" onAction="#atualizarCliente" text="Atualizar Cliente" />
-
-
-   </children>
-</AnchorPane>
+                                <Label text="Celular" />
+                                <FormattedField fx:id="celularField" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#deletarCliente" text="Deletar Cliente" HBox.hgrow="NEVER" />
+                        <Button mnemonicParsing="false" onAction="#atualizarCliente" text="Atualizar Cliente" HBox.hgrow="NEVER" />
+                    </children>
+                </HBox>
+            </children>
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>

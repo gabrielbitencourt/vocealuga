@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class Modelo {
 
+    public int id;
     public String nome;
 
     public Marca marca;
@@ -24,6 +25,7 @@ public class Modelo {
     }
 
     public Modelo(ResultSet rs) throws SQLException {
+        this.id = rs.getInt("id");
         this.nome = rs.getString("nome");
 
         this.marca_id = rs.getInt("marca_id");
@@ -37,9 +39,9 @@ public class Modelo {
 
     public static Map<Integer, ArrayList<Modelo>> byMarca() throws SQLException {
         Map<Integer, ArrayList<Modelo>> result = new HashMap<>();
-        Connection conn = new ConexaoBanco().getConnection();
+        Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement(
-                "SELECT modelos.nome, modelos.grupo_id, modelos.marca_id, marcas.nome AS marca, grupos.nome AS grupo FROM modelos " +
+                "SELECT modelos.id, modelos.nome, modelos.grupo_id, modelos.marca_id, marcas.nome AS marca, grupos.nome AS grupo FROM modelos " +
                 "LEFT JOIN marcas ON modelos.marca_id = marcas.id " +
                 "LEFT JOIN grupos ON modelos.grupo_id = grupos.id");
         ResultSet rs = statement.executeQuery();

@@ -21,6 +21,7 @@ CREATE TABLE `funcionarios` (
 	`sobrenome` VARCHAR(255) NOT NULL,
 	`usuario` VARCHAR(255) NOT NULL UNIQUE,
 	`senha` VARCHAR(512) NOT NULL,
+	`gerente` TINYINT(1) NOT NULL DEFAULT 0,
 	`filial_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -58,9 +59,12 @@ CREATE TABLE `veiculos` (
 
 CREATE TABLE `reservas` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`veiculo_id` VARCHAR(7) NOT NULL,
-	`inicio` DATE NOT NULL,
-	`fim` DATE NOT NULL,
+	`retirada` DATE NOT NULL,
+	`entrega` DATE NOT NULL,
+	`filial_id` INT NOT NULL,
+	`cliente_id` VARCHAR(11) NOT NULL,
+	`grupo_id` INT NOT NULL,
+	`veiculo_id` VARCHAR(7),
 	`pontos` INT NOT NULL DEFAULT 0,
 	PRIMARY KEY (`id`)
 );
@@ -92,6 +96,7 @@ CREATE TABLE `incidentes` (
 
 CREATE TABLE `cartoes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
+	`titular` TEXT NOT NULL,
 	`numero` VARCHAR(20) NOT NULL UNIQUE,
 	`codigo` VARCHAR(3) NOT NULL,
 	`expiracao` DATE NOT NULL,
@@ -113,7 +118,13 @@ ALTER TABLE `veiculos` ADD CONSTRAINT `veiculos_fk0` FOREIGN KEY (`filial_id`) R
 
 ALTER TABLE `veiculos` ADD CONSTRAINT `veiculos_fk1` FOREIGN KEY (`modelo_id`) REFERENCES `modelos`(`id`);
 
-ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk0` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos`(`placa`);
+ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk0` FOREIGN KEY (`cliente_id`) REFERENCES `clientes`(`cpf`);
+
+ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk1` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos`(`placa`);
+
+ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk2` FOREIGN KEY (`grupo_id`) REFERENCES `grupos`(`id`);
+
+ALTER TABLE `reservas` ADD CONSTRAINT `reservas_fk3` FOREIGN KEY (`filial_id`) REFERENCES `filiais`(`id`);
 
 ALTER TABLE `manutencoes` ADD CONSTRAINT `manutencoes_fk0` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos`(`placa`);
 
@@ -232,5 +243,13 @@ INSERT INTO `marcas` (`nome`) VALUES
 -- ('Wake'),
 -- ('Walk');
 
+
+-- SEEDERS
 INSERT INTO `modelos` (`nome`, `ano`, `grupo_id`, `marca_id`) VALUES
 ('Carro Teste', NULL, 1, 1);
+
+INSERT INTO `clientes` (`cpf`, `nome`, `sobrenome`, `celular`, `endereco`, `cnh`, `nascimento`, `email`) VALUES
+('11111111111', 'Cliente', 'da Silva', '21999999999', 'Rua dos Bobos, 0', '99999999999', '2001-01-01', 'cliente@vcaluga.com');
+
+INSERT INTO `veiculos` (`placa`, `disponivel`, `km`, `comprado`, `filial_id`, `modelo_id`)
+VALUES ('QWE5710', '1', '0', '2019-04-25', '1', '1')

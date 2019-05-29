@@ -11,10 +11,9 @@ import java.sql.SQLException;
  * @author EDS
  *
  */
-public class ConexaoBanco {
+public abstract class ConexaoBanco {
 
-
-    public Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         try {
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/vocealuga?useTimezone=true&serverTimezone=UTC", "root", "");
 

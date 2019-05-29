@@ -16,13 +16,10 @@ public class Login {
     public void login(ActionEvent event) throws IOException {
 
         try {
-            if (Funcionario.authenticate(nameField.getText(), passwordField.getText()) != null) {
+            if (Funcionario.authenticate(nameField.getText(), passwordField.getText())) {
                 Navigate.to(this.getClass(), "cliente/listagem/cliente.listagem.fxml", "VocêAluga - Painel");
             }
             else {
-                /*
-                 * TODO - mostrar mensagem de erro
-                 */
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Usuário ou senha inválidos", ButtonType.CLOSE);
                 alert.showAndWait();
             }

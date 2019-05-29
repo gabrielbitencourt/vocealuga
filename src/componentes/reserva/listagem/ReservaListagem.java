@@ -11,16 +11,25 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.util.Callback;
+import models.Reserva;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
-import java.time.Month;
+import java.sql.SQLException;
 import java.util.*;
 
 public class ReservaListagem implements Initializable {
 
 	Calendar cal = Calendar.getInstance();
+	Map<Integer, Map<Integer, Map<Integer, ArrayList<Reserva>>>> reservas;
+	{
+		try {
+			reservas = Reserva.all();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@FXML TableView monthTable;
 	@FXML TableColumn<Week, Week> domingoCol;
@@ -38,17 +47,19 @@ public class ReservaListagem implements Initializable {
 		public int day;
 		public int month;
 		public int year;
+		public ArrayList<Reserva> reservas;
 
-		public Day(int week, int day, int month, int year) {
+		public Day(int week, int day, int month, int year, ArrayList<Reserva> reservas) {
 			this.weekday = week;
 			this.day = day;
 			this.month = month;
 			this.year = year;
+			this.reservas = reservas;
 		}
 
 		@Override
 		public String toString() {
-			return this.day + "/" + this.month + "/" + this.year;
+			return this.day + "/" + (this.month + 1) + "/" + this.year;
 		}
 	}
 	public class Week {
@@ -73,7 +84,6 @@ public class ReservaListagem implements Initializable {
 		@Override
 		public TableCell<Week, Week> call(TableColumn<Week, Week> col) {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("./cell/dia.cell.fxml"));
-			int day = this.day;
 			try {
 				final Node node = loader.load();
 				return new TableCell<Week, Week>() {
@@ -104,12 +114,17 @@ public class ReservaListagem implements Initializable {
 	public class DayCellValueFactory implements Callback<CellDataFeatures<Week, Week>, ObservableValue<Week>> {
 		@Override public ObservableValue<Week> call(CellDataFeatures<Week, Week> features) {
 			return new ReadOnlyObjectWrapper(features.getValue());
-
 		}
 	}
 
 	@FXML
 	public void initialize(URL location, ResourceBundle resources) {
+//		try {
+//			reservas = Reserva.all();
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
 		monthTable.getSelectionModel().setCellSelectionEnabled(true);
 
 		domingoCol.setCellValueFactory(new DayCellValueFactory());
@@ -136,7 +151,7 @@ public class ReservaListagem implements Initializable {
 
 	public void initMes() {
 		monthTable.getItems().clear();
-		mesLabel.setText(Month.of(cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR));
+		mesLabel.setText(cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR));
 
 		cal.set(Calendar.DAY_OF_MONTH, 1);
 		int month = cal.get(Calendar.MONTH);
@@ -147,7 +162,13 @@ public class ReservaListagem implements Initializable {
 			ArrayList<Day> daysOfWeek = new ArrayList<>();
 
 			while (true) {
-				daysOfWeek.add(new Day(cal.get(Calendar.DAY_OF_WEEK), cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR)));
+				ArrayList<Reserva> reservasDoDia = new ArrayList<>();
+				if (reservas.containsKey(cal.get(Calendar.YEAR)) && reservas.get(cal.get(Calendar.YEAR)).containsKey(cal.get(Calendar.MONTH)) && reservas.get(cal.get(Calendar.YEAR)).get(cal.get(Calendar.MONTH)).containsKey(cal.get(Calendar.DAY_OF_MONTH))) {
+					reservasDoDia = reservas.get(cal.get(Calendar.YEAR)).get(cal.get(Calendar.MONTH)).get(cal.get(Calendar.DAY_OF_MONTH));
+				}
+
+
+				daysOfWeek.add(new Day(cal.get(Calendar.DAY_OF_WEEK), cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), reservasDoDia));
 				cal.add(Calendar.DAY_OF_MONTH, 1);
 				if (cal.get(Calendar.DAY_OF_WEEK) == 1 || cal.get(Calendar.MONTH) > month) {
 					break;
