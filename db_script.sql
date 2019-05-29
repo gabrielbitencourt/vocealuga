@@ -61,6 +61,7 @@ CREATE TABLE `reservas` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`retirada` DATE NOT NULL,
 	`entrega` DATE NOT NULL,
+	`status` VARCHAR(10) NOT NULL DEFAULT 'reservado',
 	`filial_id` INT NOT NULL,
 	`cliente_id` VARCHAR(11) NOT NULL,
 	`grupo_id` INT NOT NULL,

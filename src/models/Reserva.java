@@ -11,7 +11,9 @@ public class Reserva {
     int id;
 
     Date retirada;
-    Date entrega;
+	Date entrega;
+	
+	String status;
 
     Filial filial;
     int filial_id;
@@ -28,7 +30,8 @@ public class Reserva {
     public Reserva(ResultSet rs) throws SQLException {
         this.id = rs.getInt("id");
         this.retirada = rs.getDate("retirada");
-        this.entrega = rs.getDate("entrega");
+		this.entrega = rs.getDate("entrega");
+		this.cliente_id = rs.getString("status");
         this.filial_id = rs.getInt("filial_id");
         this.cliente_id = rs.getString("cliente_id");
         this.grupo_id = rs.getInt("grupo_id");
@@ -37,7 +40,8 @@ public class Reserva {
 
     public Reserva(Date retirada, Date entrega, int filial_id, String cliente_id, int grupo_id) {
         this.retirada = retirada;
-        this.entrega = entrega;
+		this.entrega = entrega;
+		this.status = "reservado";
         this.filial_id = filial_id;
         this.cliente_id = cliente_id;
         this.grupo_id = grupo_id;
@@ -45,7 +49,8 @@ public class Reserva {
 
     public Reserva(Date retirada, Date entrega, int filial_id, String cliente_id, int grupo_id, String veiculo_id) {
         this.retirada = retirada;
-        this.entrega = entrega;
+		this.entrega = entrega;
+		this.status = "reservado";
         this.filial_id = filial_id;
         this.cliente_id = cliente_id;
         this.veiculo_id = veiculo_id;
@@ -82,13 +87,14 @@ public class Reserva {
 
     public boolean save() throws SQLException {
         Connection conn = ConexaoBanco.getConnection();
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?)");
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, status, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?)");
         statement.setDate(1, this.retirada);
         statement.setDate(2, this.entrega);
-        statement.setInt(3, this.filial_id);
-        statement.setString(4, this.cliente_id);
-        statement.setInt(5, this.grupo_id);
-        statement.setString(6, this.veiculo_id);
+        statement.setsetStringDate(3, this.status);
+        statement.setInt(4, this.filial_id);
+        statement.setString(5, this.cliente_id);
+        statement.setInt(6, this.grupo_id);
+        statement.setString(7, this.veiculo_id);
 
 
         boolean executed = statement.execute();
