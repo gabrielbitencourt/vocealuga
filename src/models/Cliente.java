@@ -52,17 +52,6 @@ public class Cliente {
         return this.nome + " " + this.sobrenome;
     }
 
-    public boolean saveOrUpdate() throws SQLException {
-        // BUG - SALVA VALORES NULOS COMO VAZIOS
-        // ARRUMAR - GARANTIR QUE TODAS AS PROPRIEDADES DA INSTANCIA TEM UM VALOR
-        if (Cliente.findById(this.cpf) != null) {
-            return this.update();
-        }
-        else {
-            return this.save();
-        }
-    }
-
     public boolean save() throws SQLException {
         Connection conn = ConexaoBanco.getConnection();
         PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, cnh, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");

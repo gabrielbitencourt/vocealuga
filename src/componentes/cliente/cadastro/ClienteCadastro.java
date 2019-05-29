@@ -25,6 +25,10 @@ public class ClienteCadastro {
     @FXML FormattedField nascimentoField;
     @FXML TextField emailField;
     @FXML FormattedField celularField;
+    @FXML TextField cardNameField;
+    @FXML TextField cardNumberField;
+    @FXML FormattedField cardCodField;
+    @FXML FormattedField cardExpField;
 
     public void cancelar(ActionEvent event) throws IOException {
         Navigate.to(this.getClass(), "cliente/listagem/cliente.listagem.fxml");
@@ -32,17 +36,20 @@ public class ClienteCadastro {
 
     public void cadastrarCliente(ActionEvent event) {
         Date nascimento = null;
+        Date cardExp = null;
         try {
             nascimento = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(nascimentoField.getText()).getTime());
-
+            cardExp = new Date(new SimpleDateFormat("MM/yy").parse(cardExpField.getText()).getTime());
         } catch (ParseException e) {
             e.printStackTrace();
             // TODO mensagem de erro por causa do formato da data
         }
-        Cliente cliente = new Cliente(nomeField.getText(), sobrenomeField.getText(),
-                enderecoField.getText(), cpfField.getPlainText(), cnhField.getPlainText(),
-                emailField.getText(), celularField.getPlainText(), nascimento);
+
         try {
+            Cliente cliente = new Cliente(nomeField.getText(), sobrenomeField.getText(),
+                    enderecoField.getText(), cpfField.getPlainText(), cnhField.getPlainText(),
+                    emailField.getText(), celularField.getPlainText(), nascimento);
+
             cliente.save();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Cliente cadastrado com sucesso. Deseja cadastrar outro?", ButtonType.NO, ButtonType.YES);
             alert.showAndWait()

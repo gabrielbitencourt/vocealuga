@@ -96,6 +96,7 @@ CREATE TABLE `incidentes` (
 
 CREATE TABLE `cartoes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
+	`titular` TEXT NOT NULL,
 	`numero` VARCHAR(20) NOT NULL UNIQUE,
 	`codigo` VARCHAR(3) NOT NULL,
 	`expiracao` DATE NOT NULL,

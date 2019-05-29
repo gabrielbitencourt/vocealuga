@@ -30,7 +30,7 @@
                         <TextField fx:id="nomeField" prefHeight="26.0" prefWidth="106.0" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                   <VBox HBox.hgrow="ALWAYS">
@@ -40,7 +40,7 @@
                         <TextField fx:id="sobrenomeField" prefHeight="26.0" prefWidth="223.0" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                </children>
@@ -54,41 +54,17 @@
                         <TextField fx:id="enderecoField" prefHeight="26.0" prefWidth="339.0" promptText="ex.: Rua dos Bobos, 0 apto 1 - Bairro - Cidade/ES" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                     </HBox.margin>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="127.0" layoutY="214.0">
-               <children>
-                  <VBox HBox.hgrow="ALWAYS">
-                     <children>
-
-                        <Label text="CPF" />
-                        <FormattedField fx:id="cpfField" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
-                     </children>
-                     <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                     </HBox.margin>
-                  </VBox>
-                  <VBox HBox.hgrow="ALWAYS">
-                     <children>
-
-                        <Label text="CNH" />
-                        <FormattedField fx:id="cnhField" mask="###########" prefHeight="26.0" prefWidth="106.0" />
-                     </children>
-                     <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                   <VBox HBox.hgrow="ALWAYS">
                      <children>
 
                         <Label text="Data de Nascimento" />
-                        <FormattedField fx:id="nascimentoField" mask="##/##/####" prefHeight="25.0" prefWidth="106.0" />
+                        <FormattedField fx:id="nascimentoField" mask="##/##/####" prefHeight="25.0" prefWidth="100.0" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                </children>
@@ -98,26 +74,113 @@
                   <VBox HBox.hgrow="ALWAYS">
                      <children>
 
+                        <Label text="CPF" />
+                        <FormattedField fx:id="cpfField" mask="###.###.###-##" prefHeight="26.0" prefWidth="106.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+
                         <Label text="E-mail" />
                         <TextField fx:id="emailField" prefHeight="26.0" prefWidth="223.0" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                   <VBox HBox.hgrow="ALWAYS">
                      <children>
 
                         <Label text="Celular" />
-                        <FormattedField fx:id="celularField" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
+                        <FormattedField fx:id="celularField" mask="(##) #####-####" prefHeight="26.0" prefWidth="100.0" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                      </HBox.margin>
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#cadastrarCliente" prefHeight="30.0" prefWidth="339.0" text="Cadastrar" />
+            <HBox alignment="CENTER_LEFT" layoutX="128.0" layoutY="267.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="Cartão de Crédito">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="128.0" layoutY="267.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Nome do Titular" />
+                        <TextField fx:id="cardNameField" prefHeight="26.0" prefWidth="106.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="128.0" layoutY="267.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+
+                        <Label text="Número do Cartão" />
+                        <TextField fx:id="cardNumberField" prefHeight="26.0" prefWidth="223.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+
+                        <Label text="Código de Segurança" />
+                        <FormattedField fx:id="cardCodField" mask="###" prefHeight="26.0" prefWidth="106.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+
+                        <Label text="Vencimento do Cartão" />
+                        <FormattedField fx:id="cardExpField" mask="##/##" prefHeight="26.0" prefWidth="106.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cadastrarCliente" prefHeight="30.0" prefWidth="300.0" text="Cadastrar" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
