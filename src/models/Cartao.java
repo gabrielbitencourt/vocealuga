@@ -12,9 +12,9 @@ public class Cartao {
     Date expiraEm;
 
     Cliente cliente;
-    int cliente_id;
+    String cliente_id;
 
-    public Cartao(String titular, String numero, String codigo, Date expiraEm, int cliente_id) {
+    public Cartao(String titular, String numero, String codigo, Date expiraEm, String cliente_id) {
         this.titular = titular;
         this.numero = numero;
         this.codigo = codigo;
@@ -27,7 +27,7 @@ public class Cartao {
         this.numero = rs.getString("numero");
         this.codigo = rs.getString("codigo");
         this.expiraEm = rs.getDate("expiraEm");
-        this.cliente_id = rs.getInt("cliente_id");
+        this.cliente_id = rs.getString("cliente_id");
     }
 
     public boolean save() throws SQLException {
@@ -37,7 +37,7 @@ public class Cartao {
         statement.setString(2, this.numero);
         statement.setString(3, this.codigo);
         statement.setDate(4, this.expiraEm);
-        statement.setInt(4, this.cliente_id);
+        statement.setString(5, this.cliente_id);
 
         boolean executed = statement.execute();
         statement.close();

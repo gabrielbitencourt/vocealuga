@@ -25,7 +25,6 @@ public class ClienteEdicao {
     @FXML TextField sobrenomeField;
     @FXML TextField enderecoField;
     @FXML FormattedField cpfField;
-    @FXML FormattedField cnhField;
     @FXML FormattedField nascimentoField;
     @FXML TextField emailField;
     @FXML FormattedField celularField;
@@ -43,11 +42,9 @@ public class ClienteEdicao {
         enderecoField.setText(c.endereco);
         celularField.setPlainText(c.celular);
         cpfField.setPlainText(c.cpf);
-        cnhField.setPlainText(c.cnh);
         emailField.setText(c.email);
 
         String data = "";
-//        System.out.println(c.nascimento);
         ArrayList<String> dataList = new ArrayList<>(Arrays.asList(c.nascimento.toString().split("-")));
         Collections.reverse(dataList);
         for (String d : dataList) {

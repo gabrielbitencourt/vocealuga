@@ -3,9 +3,9 @@ package componentes.reserva.nova;
 import componentes.reserva.listagem.ReservaListagem.Day;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.Callback;
 import models.*;
 import utils.FormattedField;
 import utils.Navigate;
@@ -20,6 +20,59 @@ import java.util.Calendar;
 
 public class ReservaNova implements NavInit {
 
+    public class FormattedFieldCell extends TableCell<String, String> {
+
+        FormattedField field;
+
+        public FormattedFieldCell(String mask) {
+            this.field = new FormattedField(mask);
+        }
+
+        @Override
+        public void startEdit() {
+            super.startEdit();
+            this.updateItem(getItem(), isEmpty());
+        }
+
+        @Override
+        public void commitEdit(String newValue) {
+            super.commitEdit(newValue);
+            this.updateItem(newValue, isEmpty());
+        }
+
+        @Override
+        public void cancelEdit() {
+            super.cancelEdit();
+            this.updateItem(getItem(), isEmpty());
+        }
+
+        @Override
+        protected void updateItem(String item, boolean empty) {
+            super.updateItem(item, empty);
+            setText(this.field.getText());
+            if (isEditing()) {
+                setGraphic(this.field);
+            }
+            else {
+                setGraphic(null);
+            }
+        }
+    }
+
+    public class FormattedFieldTabelCell implements Callback<TableColumn<String, String>, TableCell<String, String>> {
+
+        String mask;
+
+        public FormattedFieldTabelCell(String mask) {
+            this.mask = mask;
+        }
+
+        @Override
+        public TableCell<String, String> call(TableColumn<String, String> param) {
+            return new FormattedFieldCell(this.mask);
+        }
+    }
+
     @FXML Label reservaLabel;
     @FXML Label grupoLabel;
     @FXML Label ouLabel;
@@ -29,6 +82,12 @@ public class ReservaNova implements NavInit {
     @FXML ChoiceBox<Veiculo> veiculoSelect;
     @FXML ChoiceBox<Grupo> grupoSelect;
     @FXML ChoiceBox<Cliente> clienteSelect;
+    @FXML TableView motoristasTable;
+    @FXML TableColumn<String, String> cpfCol;
+    @FXML TableColumn nomeCol;
+    @FXML TableColumn cnhCol;
+    @FXML TableColumn nascimentoCol;
+    @FXML TableColumn acoesCol;
 
     public void init(Object... params) {
         Day dia = (Day) params[0];
@@ -69,6 +128,12 @@ public class ReservaNova implements NavInit {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        motoristasTable.setEditable(true);
+        motoristasTable.getItems().add(null);
+        cpfCol.setCellFactory(new FormattedFieldTabelCell("###.###.###-##"));
+
+
     }
 
     public void selectedVeiculo() {
