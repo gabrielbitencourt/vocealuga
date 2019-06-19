@@ -66,8 +66,8 @@
                         <VBox HBox.hgrow="ALWAYS">
                             <children>
 
-                                <Label text="CNH" />
-                                <FormattedField fx:id="cnhField" disable="true" mask="###########" prefHeight="26.0" prefWidth="106.0" />
+                                <Label text="Celular" />
+                                <FormattedField fx:id="celularField" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
                             </children>
                      <HBox.margin>
                         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
@@ -92,16 +92,6 @@
 
                                 <Label text="E-mail" />
                                 <TextField fx:id="emailField" prefHeight="26.0" prefWidth="223.0" />
-                            </children>
-                     <HBox.margin>
-                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                     </HBox.margin>
-                        </VBox>
-                        <VBox HBox.hgrow="ALWAYS">
-                            <children>
-
-                                <Label text="Celular" />
-                                <FormattedField fx:id="celularField" mask="(##) #####-####" prefHeight="26.0" prefWidth="106.0" />
                             </children>
                      <HBox.margin>
                         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />

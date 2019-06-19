@@ -9,7 +9,6 @@ CREATE TABLE `clientes` (
 	`sobrenome` VARCHAR(255) NOT NULL,
 	`celular` VARCHAR(11) NOT NULL UNIQUE,
 	`endereco` VARCHAR(255) NOT NULL,
-	`cnh` VARCHAR(11) NOT NULL UNIQUE,
 	`nascimento` DATE NOT NULL,
 	`email` VARCHAR(255) NOT NULL UNIQUE,
 	PRIMARY KEY (`cpf`)
@@ -83,7 +82,10 @@ CREATE TABLE `manutencoes` (
 
 CREATE TABLE `motoristas` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`cliente_id` VARCHAR(11) NOT NULL,
+	`cliente_id` VARCHAR(11),
+	`nome_completo` VARCHAR(255),
+	`nascimento` DATE,
+	`cnh` VARCHAR(11) NOT NULL,
 	`reserva_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -249,8 +251,8 @@ INSERT INTO `marcas` (`nome`) VALUES
 INSERT INTO `modelos` (`nome`, `ano`, `grupo_id`, `marca_id`) VALUES
 ('Carro Teste', NULL, 1, 1);
 
-INSERT INTO `clientes` (`cpf`, `nome`, `sobrenome`, `celular`, `endereco`, `cnh`, `nascimento`, `email`) VALUES
-('11111111111', 'Cliente', 'da Silva', '21999999999', 'Rua dos Bobos, 0', '99999999999', '2001-01-01', 'cliente@vcaluga.com');
+INSERT INTO `clientes` (`cpf`, `nome`, `sobrenome`, `celular`, `endereco`, `nascimento`, `email`) VALUES
+('11111111111', 'Cliente', 'da Silva', '21999999999', 'Rua dos Bobos, 0', '2001-01-01', 'cliente@vcaluga.com');
 
 INSERT INTO `veiculos` (`placa`, `disponivel`, `km`, `comprado`, `filial_id`, `modelo_id`)
 VALUES ('QWE5710', '1', '0', '2019-04-25', '1', '1')

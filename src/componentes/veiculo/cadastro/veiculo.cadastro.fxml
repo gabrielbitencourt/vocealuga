@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import utils.FormattedField?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.cadastro.VeiculoCadastro">
@@ -14,35 +16,126 @@
 		<fx:include source="../../navbar/navbar.fxml" />
 	</top>
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-      	<children>
-      		<Label alignment="CENTER" layoutX="182.0" layoutY="45.0" prefHeight="29.0" prefWidth="247.0" text="Cadastro de Veículo">
-      			<font>
-      				<Font name="Noto Sans Regular" size="20.0" />
-      			</font>
-      		</Label>
-      
-      		<Label layoutX="128.0" layoutY="112.0" text="Marca" />
-      		<ChoiceBox fx:id="marcaSelect" layoutX="129.0" layoutY="135.0" onAction="#selectedMarca" prefHeight="27.0" prefWidth="150.0" />
-      
-      		<Label layoutX="294.0" layoutY="112.0" text="Modelo" />
-      		<ChoiceBox fx:id="modeloSelect" layoutX="295.0" layoutY="135.0" prefHeight="27.0" prefWidth="172.0" />
-      
-      		<Label layoutX="128.0" layoutY="178.0" text="Placa" />
-      		<FormattedField fx:id="placaField" layoutX="128.0" layoutY="201.0" mask="AAAAAAA" prefHeight="26.0" prefWidth="106.0" />
-      
-      		<Label layoutX="244.0" layoutY="178.0" text="Data da Compra" />
-      		<FormattedField fx:id="dataField" layoutX="249.0" layoutY="201.0" mask="##/##/####" prefHeight="27.0" prefWidth="100.0" />
-      
-      		<Label layoutX="128.0" layoutY="236.0" text="Filial" />
-      		<ChoiceBox fx:id="filialSelect" layoutX="128.0" layoutY="259.0" prefHeight="25.0" prefWidth="340.0" />
-      
-      		<Label layoutX="367.0" layoutY="178.0" text="Kilometragem" />
-      		<TextField fx:id="kmField" layoutX="367.0" layoutY="201.0" prefHeight="27.0" prefWidth="100.0" />
-      
-      		<Button layoutX="128.0" layoutY="312.0" mnemonicParsing="false" onAction="#novoVeiculo" prefHeight="27.0" prefWidth="340.0" text="Cadastrar" />
-      
-      	</children>
-      </AnchorPane>
+	   <VBox alignment="TOP_CENTER" layoutX="128.0" layoutY="45.0" maxWidth="800.0" BorderPane.alignment="CENTER">
+		   <children>
+			   <HBox>
+				   <children>
+					   <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+						   <children>
+							   <Label alignment="CENTER" text="Cadastro de Veículo" textAlignment="CENTER">
+								   <font>
+									   <Font name="Noto Sans Regular" size="20.0" />
+								   </font>
+							   </Label>
+						   </children>
+					   </VBox>
+				   </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+			   </HBox>
+			   <HBox>
+				   <children>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Marca" />
+							   <ChoiceBox fx:id="marcaSelect" maxWidth="1.7976931348623157E308" onAction="#selectedMarca" prefHeight="27.0" prefWidth="150.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Modelo" />
+							   <ChoiceBox fx:id="modeloSelect" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="172.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+				   </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+			   </HBox>
+			   <HBox>
+				   <children>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Placa" />
+							   <FormattedField fx:id="placaField" mask="AAAAAAA" prefHeight="26.0" prefWidth="106.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Data da Compra" />
+							   <FormattedField fx:id="dataField" mask="##/##/####" prefHeight="27.0" prefWidth="100.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Kilometragem" />
+							   <TextField fx:id="kmField" prefHeight="27.0" prefWidth="100.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+				   </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+			   </HBox>
+			   <HBox>
+				   <children>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Label text="Filial" />
+							   <ChoiceBox fx:id="filialSelect" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="340.0" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+				   </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+			   </HBox>
+			   <HBox>
+				   <children>
+					   <VBox HBox.hgrow="ALWAYS">
+						   <children>
+
+							   <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#novoVeiculo" prefHeight="27.0" prefWidth="340.0" text="Cadastrar" />
+						   </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+					   </VBox>
+				   </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+			   </HBox>
+		   </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+	   </VBox>
+
    </center>
 </BorderPane>

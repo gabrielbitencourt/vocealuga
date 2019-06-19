@@ -15,7 +15,6 @@ public class Cliente {
     public String sobrenome;
     public String endereco;
     public String cpf;
-    public String cnh;
     public String email;
     public String celular;
     public Date nascimento;
@@ -26,7 +25,6 @@ public class Cliente {
             this.sobrenome = rs.getString("sobrenome");
             this.endereco = rs.getString("endereco");
             this.cpf = rs.getString("cpf");
-            this.cnh = rs.getString("cnh");
             this.email = rs.getString("email");
             this.celular = rs.getString("celular");
             this.nascimento = rs.getDate("nascimento");
@@ -37,12 +35,11 @@ public class Cliente {
         }
     }
 
-    public Cliente(String nome, String sobrenome, String endereco, String cpf, String cnh, String email, String telefone, Date nascimento) {
+    public Cliente(String nome, String sobrenome, String endereco, String cpf, String email, String telefone, Date nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.endereco = endereco;
         this.cpf = cpf;
-        this.cnh = cnh;
         this.email = email;
         this.celular = telefone;
         this.nascimento = nascimento;
@@ -54,15 +51,14 @@ public class Cliente {
 
     public boolean save() throws SQLException {
         Connection conn = ConexaoBanco.getConnection();
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, cnh, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO clientes (nome, sobrenome, endereco, cpf, email, celular, nascimento) VALUES (?, ?, ?, ?, ?, ?, ?)");
         statement.setString(1, this.nome);
         statement.setString(2, this.sobrenome);
         statement.setString(3, this.endereco);
         statement.setString(4, this.cpf);
-        statement.setString(5, this.cnh);
-        statement.setString(6, this.email);
-        statement.setString(7, this.celular);
-        statement.setDate(8, this.nascimento);
+        statement.setString(5, this.email);
+        statement.setString(6, this.celular);
+        statement.setDate(7, this.nascimento);
 
         boolean executed = statement.execute();
         statement.close();

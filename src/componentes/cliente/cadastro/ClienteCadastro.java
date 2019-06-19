@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import models.Cartao;
 import models.Cliente;
 import utils.FormattedField;
 import utils.Navigate;
@@ -21,12 +22,12 @@ public class ClienteCadastro {
     @FXML TextField sobrenomeField;
     @FXML TextField enderecoField;
     @FXML FormattedField cpfField;
-    @FXML FormattedField cnhField;
     @FXML FormattedField nascimentoField;
     @FXML TextField emailField;
     @FXML FormattedField celularField;
+
     @FXML TextField cardNameField;
-    @FXML TextField cardNumberField;
+    @FXML FormattedField cardNumberField;
     @FXML FormattedField cardCodField;
     @FXML FormattedField cardExpField;
 
@@ -40,6 +41,7 @@ public class ClienteCadastro {
         try {
             nascimento = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(nascimentoField.getText()).getTime());
             cardExp = new Date(new SimpleDateFormat("MM/yy").parse(cardExpField.getText()).getTime());
+
         } catch (ParseException e) {
             e.printStackTrace();
             // TODO mensagem de erro por causa do formato da data
@@ -47,10 +49,14 @@ public class ClienteCadastro {
 
         try {
             Cliente cliente = new Cliente(nomeField.getText(), sobrenomeField.getText(),
-                    enderecoField.getText(), cpfField.getPlainText(), cnhField.getPlainText(),
-                    emailField.getText(), celularField.getPlainText(), nascimento);
+                    enderecoField.getText(), cpfField.getPlainText(), emailField.getText(),
+                    celularField.getPlainText(), nascimento);
+
+            Cartao cartao = new Cartao(cardNameField.getText(), cardNumberField.getPlainText(),
+                    cardCodField.getText(), cardExp, cpfField.getPlainText());
 
             cliente.save();
+            cartao.save();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Cliente cadastrado com sucesso. Deseja cadastrar outro?", ButtonType.NO, ButtonType.YES);
             alert.showAndWait()
                     .ifPresent(response -> {
@@ -60,9 +66,12 @@ public class ClienteCadastro {
                             enderecoField.setText("");
                             celularField.setText("");
                             cpfField.setText("");
-                            cnhField.setText("");
                             emailField.setText("");
                             nascimentoField.setText("");
+                            cardNameField.setText("");
+                            cardNumberField.setText("");
+                            cardCodField.setText("");
+                            cardExpField.setText("");
                         }
                         else if (response == ButtonType.NO) {
                             try {
