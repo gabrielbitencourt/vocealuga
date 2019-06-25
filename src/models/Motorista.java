@@ -6,9 +6,13 @@ import java.sql.SQLException;
 
 public class Motorista {
 
+    public String cpf;
     public String nome;
     public Date nascimento;
     public String cnh;
+
+    public Motorista() {
+    }
 
     public Motorista(String nome, Date nascimento, String cnh) {
         this.nome = nome;

@@ -1,16 +1,19 @@
 package componentes.reserva.nova;
 
 import componentes.reserva.listagem.ReservaListagem.Day;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.KeyCode;
 import javafx.util.Callback;
 import models.*;
 import utils.FormattedField;
 import utils.Navigate;
 import utils.Navigate.NavInit;
 
+import java.lang.reflect.Field;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -20,12 +23,29 @@ import java.util.Calendar;
 
 public class ReservaNova implements NavInit {
 
-    public class FormattedFieldCell extends TableCell<String, String> {
+    public class MotoristaCell extends TableCell<String, String> {
 
-        FormattedField field;
+        Field field;
+        FormattedField formattedField;
 
-        public FormattedFieldCell(String mask) {
-            this.field = new FormattedField(mask);
+        public MotoristaCell(String fieldName) throws NoSuchFieldException {
+            this.field = Motorista.class.getDeclaredField(fieldName);
+            this.formattedField = new FormattedField();
+            this.formattedField.setOnKeyPressed(event -> {
+                if (event.getCode() == KeyCode.ENTER) {
+                    this.updateItem(this.getItem(), this.isEmpty());
+                }
+            });
+        }
+
+        public MotoristaCell(String fieldName, String mask) throws NoSuchFieldException {
+            this.field = Motorista.class.getDeclaredField(fieldName);
+            this.formattedField = new FormattedField(mask);
+            this.formattedField.setOnKeyPressed(event -> {
+                if (event.getCode() == KeyCode.ENTER) {
+                    this.updateItem(this.getItem(), this.isEmpty());
+                }
+            });
         }
 
         @Override
@@ -38,6 +58,33 @@ public class ReservaNova implements NavInit {
         public void commitEdit(String newValue) {
             super.commitEdit(newValue);
             this.updateItem(newValue, isEmpty());
+
+            System.out.println(this.getIndex());
+            if (this.field.getName() == "cpf") {
+                if (this.getTableView().getItems().size() <= this.getIndex() + 1) {
+//                    this.getTableView().getItems().add(new Motorista());
+                    this.getTableView().getItems().add(null);
+                }
+                if (this.formattedField.getPlainText().length() != 11) {
+                    System.out.println("cpf inválido");
+                }
+                else {
+                    String cpf = this.formattedField.getPlainText();
+                    try {
+                        Cliente cliente = Cliente.findById(cpf);
+                        if (cliente != null) {
+                            System.out.println(cliente);
+                        }
+                        else {
+                            System.out.println("cliente não encontrado");
+                        }
+
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
         }
 
         @Override
@@ -49,9 +96,15 @@ public class ReservaNova implements NavInit {
         @Override
         protected void updateItem(String item, boolean empty) {
             super.updateItem(item, empty);
-            setText(this.field.getText());
+            setText(this.formattedField.getText());
+//            try {
+//                this.field.set(this.getTableView().getItems().get(this.getIndex()), this.formattedField.getPlainText());
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
             if (isEditing()) {
-                setGraphic(this.field);
+                setGraphic(this.formattedField);
             }
             else {
                 setGraphic(null);
@@ -59,17 +112,39 @@ public class ReservaNova implements NavInit {
         }
     }
 
-    public class FormattedFieldTabelCell implements Callback<TableColumn<String, String>, TableCell<String, String>> {
+    public class MotoristaTableCell implements Callback<TableColumn<String, String>, TableCell<String, String>> {
 
+        String fieldName;
         String mask;
 
-        public FormattedFieldTabelCell(String mask) {
+        public MotoristaTableCell(String fieldName, String mask) {
+            this.fieldName = fieldName;
             this.mask = mask;
+        }
+
+        public MotoristaTableCell(String fieldName) {
+            this.fieldName = fieldName;
         }
 
         @Override
         public TableCell<String, String> call(TableColumn<String, String> param) {
-            return new FormattedFieldCell(this.mask);
+            try {
+                if (mask != null) {
+                    return new MotoristaCell(this.fieldName, this.mask);
+                }
+                return new MotoristaCell(this.fieldName);
+
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+                return null;
+            }
+
+        }
+    }
+
+    public class MotoristaCellValueFactory implements Callback<TableColumn.CellDataFeatures<String, String>, ObservableValue<String>> {
+        @Override public ObservableValue<String> call(TableColumn.CellDataFeatures<String, String> features) {
+            return new ReadOnlyObjectWrapper(features.getValue());
         }
     }
 
@@ -82,7 +157,7 @@ public class ReservaNova implements NavInit {
     @FXML ChoiceBox<Veiculo> veiculoSelect;
     @FXML ChoiceBox<Grupo> grupoSelect;
     @FXML ChoiceBox<Cliente> clienteSelect;
-    @FXML TableView motoristasTable;
+    @FXML TableView<Motorista> motoristasTable;
     @FXML TableColumn<String, String> cpfCol;
     @FXML TableColumn nomeCol;
     @FXML TableColumn cnhCol;
@@ -131,8 +206,8 @@ public class ReservaNova implements NavInit {
 
         motoristasTable.setEditable(true);
         motoristasTable.getItems().add(null);
-        cpfCol.setCellFactory(new FormattedFieldTabelCell("###.###.###-##"));
-
+        cpfCol.setCellValueFactory(new MotoristaCellValueFactory());
+        cpfCol.setCellFactory(new MotoristaTableCell("cpf", "###.###.###-##"));
 
     }
 
