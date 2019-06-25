@@ -96,5 +96,28 @@ public class Reserva {
         conn.close();
         return executed;
     }
+    @Override
+    public String toString() {
+        return this.cliente_id;
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public int getFilial_id() {
+        return filial_id;
+    }
+
+    public String getCliente_id() {
+        return cliente_id;
+    }
+
+    public String getVeiculo_id() {
+        return veiculo_id;
+    }
+
+    public int getGrupo_id() {
+        return grupo_id;
+    }
 }

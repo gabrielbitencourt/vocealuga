@@ -149,6 +149,17 @@ public class ReservaListagem implements Initializable {
 		this.initMes();
 	}
 
+	/*public void updateReservasByCPF(ObservableValue<? extends String> observable, String oldValue, String newValue){
+
+		reservas.values().
+		if (newValue.length() > 0) {
+			filtered.removeIf(reserva -> {
+				return !reserva.toString().contains(newValue);
+			});
+			System.out.println(filtered.toString());
+		}
+	}*/
+
 	public void initMes() {
 		monthTable.getItems().clear();
 		mesLabel.setText(cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR));

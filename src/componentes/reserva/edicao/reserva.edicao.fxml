@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import utils.FormattedField?>
+<!--
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="componentes.reserva.edicao.ReservaEdicao"
+            prefHeight="400.0" prefWidth="600.0">
+
+</AnchorPane> -->
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.reserva.edicao.ReservaEdicao">
+    <top>
+        <fx:include source="../../navbar/navbar.fxml" />
+    </top>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <Label fx:id="reservaLabel" alignment="CENTER" layoutX="177.0" layoutY="45.0" prefHeight="29.0" prefWidth="247.0" text="Editar Reserva">
+                    <font>
+                        <Font name="Noto Sans Regular" size="20.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="130.0" layoutY="92.0" text="Retirada em" />
+                <FormattedField fx:id="retiradaField" disable="true" layoutX="130.0" layoutY="116.0" mask="##/##/####" prefHeight="25.0" prefWidth="90.0" />
+
+                <Label layoutX="234.0" layoutY="92.0" text="Devolução em" />
+                <DatePicker fx:id="entregaField" layoutX="234.0" layoutY="116.0" prefHeight="25.0" prefWidth="90.0" />
+
+                <Label layoutX="337.0" layoutY="92.0" text="Local de Retirada" />
+                <ChoiceBox fx:id="filialSelect" layoutX="337.0" layoutY="116.0" prefHeight="25.0" prefWidth="133.0" />
+
+                <Label layoutX="130.0" layoutY="154.0" text="Modelo do Veículo" />
+                <ChoiceBox fx:id="veiculoSelect" layoutX="130.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" />
+                <!-- onAction="#selectedVeiculo" -->
+                <Label fx:id="ouLabel" layoutX="293.0" layoutY="182.0" text="ou" />
+
+                <Label fx:id="grupoLabel" layoutX="320.0" layoutY="154.0" text="Grupo do Veículo" />
+                <ChoiceBox fx:id="grupoSelect" layoutX="320.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" />
+                <!-- onAction="#selectedGrupo" -->
+                <Label layoutX="130.0" layoutY="213.0" text="Motorista" />
+                <ChoiceBox fx:id="clienteSelect" layoutX="130.0" layoutY="237.0" prefHeight="25.0" prefWidth="340.0" />
+
+                <Button layoutX="130.0" layoutY="312.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="340.0" text="Reservar" />
+                <!-- onAction="#editarReserva" -->
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
