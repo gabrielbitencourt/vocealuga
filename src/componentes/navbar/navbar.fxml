@@ -11,7 +11,6 @@
               <Button layoutX="10.0" layoutY="2.0" mnemonicParsing="false" onAction="#toClientes" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Clientes" textFill="WHITE" />
               <Button layoutX="163.0" layoutY="2.0" mnemonicParsing="false" onAction="#toReservas" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Reservas" textFill="WHITE" />
               <Button layoutX="85.0" layoutY="2.0" mnemonicParsing="false" onAction="#toVeiculos" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Veículos" textFill="WHITE" />
-              <Button layoutX="240.0" layoutY="2.0" mnemonicParsing="false" onAction="#toEntrega" prefHeight="26.0" style="-fx-background-color: black; -fx-cursor: hand;" text="Entrega" textFill="WHITE" />
           </children>
       </Pane>
    </center>
