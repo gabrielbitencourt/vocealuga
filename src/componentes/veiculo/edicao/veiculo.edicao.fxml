@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.edicao.VeiculoEdicao">
-   <children>
-      <Label layoutX="116.0" layoutY="133.0" text="pode aparecer as reservas desse carro, manutencoes agendadas, etc..." />
-      <Button layoutX="391.0" layoutY="261.0" mnemonicParsing="false" text="Agendar Manutenção" />
-      <Button layoutX="531.0" layoutY="261.0" mnemonicParsing="false" text="Vender" />
-      <Label layoutX="457.0" layoutY="244.0" text="Arrumar responsividade " />
-   </children>
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="componentes.veiculo.edicao.VeiculoEdicao">
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <Button mnemonicParsing="false" text="Agendar Manutenção" textAlignment="RIGHT">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" text="Vender" textAlignment="RIGHT">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Modelo:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="modeloLabel" text="Label">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Marca:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="marcaLabel" text="Renault">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -104,7 +104,7 @@ public class Reserva {
 
     public boolean save() throws SQLException {
         Connection conn = ConexaoBanco.getConnection();
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, status, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?)");
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, status, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
         statement.setDate(1, this.retirada);
         statement.setDate(2, this.entrega);
         statement.setString(3, this.status);
