@@ -3,6 +3,7 @@ package componentes.reserva.edicao;
 import componentes.reserva.listagem.ReservaListagem.Day;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -15,6 +16,7 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.chrono.Chronology;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
@@ -30,8 +32,11 @@ public class ReservaEdicao implements NavInit {
     @FXML ChoiceBox<Grupo> grupoSelect;
     @FXML ChoiceBox<Cliente> clienteSelect;
 
+    Reserva reserva;
+
     public void init(Object... params) {
         Reserva r = (Reserva) params[0];
+        this.reserva = r;
         Day dia = (Day) params[1];
 
         Calendar cal = Calendar.getInstance();
@@ -46,6 +51,7 @@ public class ReservaEdicao implements NavInit {
 
 
         try {
+            entregaField.setValue(r.getEntrega().toLocalDate());
             for (Filial f : Filial.all()) {
                 filialSelect.getItems().add(f);
                 if (f.id == r.getFilial_id()) {
@@ -90,13 +96,13 @@ public class ReservaEdicao implements NavInit {
             this.veiculoSelect.setValue(null);
         }
     }
-
+*/
     public void editarReserva(ActionEvent event) {
-        Date retirada = null;
+      //  Date retirada = null;
         Date entrega = null;
         try {
             // TODO (BUG) - data esta voltando um dia do selecionado
-            retirada = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(retiradaField.getText()).getTime());
+        //    retirada = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(retiradaField.getText()).getTime());
 //            entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getText()).getTime());
             entrega = new Date(new SimpleDateFormat("dd/MM/yyyy").parse(entregaField.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).getTime());
 
@@ -104,23 +110,21 @@ public class ReservaEdicao implements NavInit {
             e.printStackTrace();
             // TODO mensagem de erro por causa do formato da data
         }
-
-        Reserva nova;
-        if (this.grupoSelect.getValue() != null) {
-            nova = new Reserva(retirada, entrega, filialSelect.getValue().id, clienteSelect.getValue().cpf, this.grupoSelect.getValue().id);
-        }
-        else {
-            nova = new Reserva(retirada, entrega, filialSelect.getValue().id, clienteSelect.getValue().cpf, this.veiculoSelect.getValue().modelo.grupo_id, this.veiculoSelect.getValue().placa);
-        }
+       // reserva.setRetirada(retirada);
+        reserva.setEntrega(entrega);
+        reserva.setFilial(filialSelect.getValue());
+        reserva.setCliente(clienteSelect.getValue());
+        reserva.setVeiculo(veiculoSelect.getValue());
+        reserva.setGrupo(grupoSelect.getValue());
 
         try {
-            nova.save();
+            reserva.update();
             Navigate.to(this.getClass(), "reserva/listagem/reserva.listagem.fxml");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-    } */
+    }
 
 
 }

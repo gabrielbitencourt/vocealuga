@@ -57,6 +57,23 @@ public class Reserva {
         this.grupo_id = grupo_id;
     }
 
+    public boolean update() throws SQLException {
+        Connection conn = ConexaoBanco.getConnection();
+        PreparedStatement statement = conn.prepareStatement("UPDATE reservas SET retirada = ?, entrega = ?, filial_id = ?, cliente_id = ?, grupo_id = ?, veiculo_id = ? WHERE id=?");
+        statement.setDate(1, this.retirada);
+        statement.setDate(2, this.entrega);
+        statement.setString(3, Integer.toString(this.filial_id));
+        statement.setString(4, this.cliente_id);
+        statement.setString(5, Integer.toString(this.grupo_id));
+        statement.setString(6, this.veiculo_id);
+
+        statement.setString(7, Integer.toString(this.id));
+        boolean executed = statement.execute();
+        statement.close();
+        conn.close();
+        return executed;
+    }
+
     public static Map<Integer, Map<Integer, Map<Integer, ArrayList<Reserva>>>> all() throws SQLException {
         Map<Integer, Map<Integer, Map<Integer, ArrayList<Reserva>>>> results = new HashMap<>();
         Connection conn = ConexaoBanco.getConnection();
@@ -90,7 +107,7 @@ public class Reserva {
         PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, status, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?)");
         statement.setDate(1, this.retirada);
         statement.setDate(2, this.entrega);
-        //statement.setsetStringDate(3, this.status);
+        statement.setString(3, this.status);
         statement.setInt(4, this.filial_id);
         statement.setString(5, this.cliente_id);
         statement.setInt(6, this.grupo_id);
@@ -125,5 +142,49 @@ public class Reserva {
 
     public int getGrupo_id() {
         return grupo_id;
+    }
+
+    public Date getEntrega() {
+        return entrega;
+    }
+
+    public void setRetirada(Date retirada) {
+        this.retirada = retirada;
+    }
+
+    public void setEntrega(Date entrega) {
+        this.entrega = entrega;
+    }
+
+    public void setFilial(Filial filial) {
+        this.filial = filial;
+    }
+
+    public void setFilial_id(int filial_id) {
+        this.filial_id = filial_id;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setCliente_id(String cliente_id) {
+        this.cliente_id = cliente_id;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
+    public void setVeiculo_id(String veiculo_id) {
+        this.veiculo_id = veiculo_id;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+
+    public void setGrupo_id(int grupo_id) {
+        this.grupo_id = grupo_id;
     }
 }
