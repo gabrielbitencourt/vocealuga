@@ -90,7 +90,7 @@ public class Reserva {
         PreparedStatement statement = conn.prepareStatement("INSERT INTO reservas (retirada, entrega, status, filial_id, cliente_id, grupo_id, veiculo_id) VALUES (?, ?, ?, ?, ?, ?)");
         statement.setDate(1, this.retirada);
         statement.setDate(2, this.entrega);
-        statement.setsetStringDate(3, this.status);
+        //statement.setsetStringDate(3, this.status);
         statement.setInt(4, this.filial_id);
         statement.setString(5, this.cliente_id);
         statement.setInt(6, this.grupo_id);
